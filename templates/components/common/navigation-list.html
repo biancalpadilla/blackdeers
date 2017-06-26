@@ -1,0 +1,30 @@
+{{#if children}}
+<a class="navPages-action has-subMenu" href="{{url}}">
+    {{name}}
+    <span class="triangle-with-shadow"></span>
+</a>
+<div class="navPage-subMenu" id="navPages-{{id}}" tabindex="-1">
+    <ul class="navPage-subMenu-list">
+        {{#each children}}
+            <li class="navPage-subMenu-item">
+                {{#if children}}
+                    <a class="navPage-subMenu-action navPages-action has-subMenu" href="{{url}}">
+                        <span>{{name}}</span>
+                    </a>
+                    <ul class="navPage-childList" id="navPages-{{id}}">
+                        {{#each children}}
+                        <li class="navPage-childList-item">
+                            <a class="navPage-childList-action navPages-action" href="{{url}}"><span>{{name}}</span></a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                {{else}}
+                    <a class="navPage-subMenu-action navPages-action" href="{{url}}"><span>{{name}}</span></a>
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+</div>
+{{else}}
+<a class="navPages-action" href="{{url}}">{{name}}</a>
+{{/if}}

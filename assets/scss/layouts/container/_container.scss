@@ -1,0 +1,967 @@
+.container {
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
+   min-width: 300px;
+   @media (min-width: 992px) {
+      padding: 0;
+   }
+   @media (max-width: 991px) {
+      width: 100%;
+   }
+}
+
+.container_page {
+   padding-bottom: 70px;
+   margin: 0 auto;
+}
+
+.page-type-default .container_page {
+   padding-bottom: 0;
+}
+
+// Breadcrumbs
+.breadcrumbs {
+   margin-top: 10px;
+   margin-bottom: 25px;
+   & .breadcrumb {
+      display: inline-block;
+      font-size: fontSize("base");
+      padding-top: 5px;
+      padding-right: 10px;
+      &::before {
+         content: "/";
+         color: #b4b4b4;
+         position: relative;
+         top: 0px;
+         margin: 0 5px 0 0px;
+      }
+      &:first-child::before {
+         display: none;
+      }
+      & a:hover {
+         border-bottom: 1px solid stencilColor('breadcrumb-label-color-hover');
+      }
+      & .breadcrumb-label {
+         color: stencilColor('breadcrumb-label-color');
+         &:hover {
+            color: stencilColor('breadcrumb-label-color-hover');
+         }
+         &.is-active {
+            color: stencilColor('breadcrumb-label-color-active');
+         }
+      }
+   }
+}
+
+.category-heading {
+   clear: both;
+   border-bottom: 1px solid #d9d9d9;
+   margin-bottom: 26px;
+   display: -webkit-box;
+   /* OLD - iOS 6-, Safari 3.1-6 */
+   display: -moz-box;
+   /* OLD - Firefox 19- (buggy but mostly works) */
+   display: -ms-flexbox;
+   /* TWEENER - IE 10 */
+   display: -webkit-flex;
+   /* NEW - Chrome */
+   display: flex;
+   /* NEW, Spec - Opera 12.1, Firefox 20+ */
+   justify-content: space-between;
+   align-items: center;
+   & .page-heading {
+      display: inline-block;
+      padding: 0 0 20px;
+      margin-bottom: 0;
+   }
+   @media (max-width: 600px) {
+      flex-wrap: wrap;
+   }
+}
+
+.page-heading {
+   font-family: $fontFamily-headings;
+   font-size: 24px;
+   font-weight: 700;
+   margin: 0 0 27px;
+   letter-spacing: 0;
+   text-align: left;
+}
+
+
+/*Account Created Heading Title Spacing - Fixed*/
+
+[data-page-no-breadcrumb] .page-heading {
+   margin-top: 27px
+}
+
+.category-image {
+   padding-bottom: 26px;
+}
+
+.category-description {
+   padding-bottom: 24px;
+   & p:last-of-type {
+      margin-bottom: 0;
+   }
+}
+
+//View Mode Buttons (GRID/LIST)
+.view-mode-btn {
+   display: -webkit-box;
+   /* OLD - iOS 6-, Safari 3.1-6 */
+   display: -moz-box;
+   /* OLD - Firefox 19- (buggy but mostly works) */
+   display: -ms-flexbox;
+   /* TWEENER - IE 10 */
+   display: -webkit-flex;
+   /* NEW - Chrome */
+   display: flex;
+   /* NEW, Spec - Opera 12.1, Firefox 20+ */
+   justify-content: space-between;
+   align-items: center;
+   margin-left: -7px;
+}
+
+.view-mode-btn a,
+.view-mode-btn a:hover,
+.view-mode-btn a:active,
+.view-mode-btn a:focus {
+   font-size: 11px;
+   font-weight: 700;
+   position: relative;
+   display: -webkit-box;
+   /* OLD - iOS 6-, Safari 3.1-6 */
+   display: -moz-box;
+   /* OLD - Firefox 19- (buggy but mostly works) */
+   display: -ms-flexbox;
+   /* TWEENER - IE 10 */
+   display: -webkit-flex;
+   /* NEW - Chrome */
+   display: flex;
+   /* NEW, Spec - Opera 12.1, Firefox 20+ */
+   align-items: center;
+   justify-content: center;
+   height: 30px;
+   margin-right: 0;
+   margin-left: 0;
+   color: rgba(0, 0, 0, .41);
+   text-decoration: none;
+}
+
+.view-mode-btn a > div {
+   width: 30px;
+}
+
+.view-mode-btn a > span {
+   text-transform: uppercase;
+   font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
+   font-size: 14px;
+   font-weight: 700;
+}
+
+.view-mode-btn a.current-view {
+   cursor: default;
+   color: rgba(0, 0, 0, 1.0);
+}
+
+.view-mode-btn a .icon-bar {
+   position: relative;
+   top: -1px;
+   width: 14px;
+   height: 4px;
+   margin: 1px auto 0 auto;
+   transition: all .15s ease;
+   opacity: .41;
+   background: #232323;
+   filter: alpha(opacity=41);
+}
+
+.view-mode-btn a#grid-view {
+   margin-right: 20px;
+}
+
+.view-mode-btn a#grid-view .icon-bar {
+   width: 4px;
+}
+
+.view-mode-btn a#grid-view .icon-bar:before,
+.view-mode-btn a#grid-view .icon-bar:after {
+   position: absolute;
+   display: block;
+   width: 4px;
+   height: 4px;
+   content: '';
+   transition: all .15s ease;
+   background: #232323;
+}
+
+.view-mode-btn a#grid-view .icon-bar:before {
+   left: -5px;
+}
+
+.view-mode-btn a#grid-view .icon-bar:after {
+   right: -5px;
+}
+
+.view-mode-btn a.current-view .icon-bar {
+   opacity: 1;
+   filter: alpha(opacity=100);
+}
+
+.actionBar[data-sort-by] {
+   width: 50%;
+   text-align: right;
+   padding: 0 0 17px 0;
+   & fieldset {
+      float: none;
+   }
+   & .form-field {
+      margin: 0;
+   }
+   & label {
+      display: inline-block;
+      font-size: 14px;
+      font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      position: relative;
+      top: 0;
+      margin-right: 11px;
+   }
+   & select {
+      display: inline-block;
+      max-width: 220px;
+      @media (max-width: 767px) {
+        max-width: 160px;
+      }
+      @media (max-width: 600px) {
+        max-width: 220px;
+      }
+   }
+   @media (max-width: 600px) {
+      float: none;
+      text-align: left;
+      width: 100%;
+      clear: both;
+      padding-top: 10px;
+   }
+}
+
+//Show More button
+.showMoreProduct a.btn {
+   width: 100%;
+   max-width: 344px;
+   margin-bottom: 40px;
+}
+
+// Home Shop by Category - Static Block
+#homeShopByCategory {
+   padding-top: 40px;
+   & .container {
+      border-bottom: 1px solid #dcdcdc;
+   }
+   & .cate-columns {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      flex-wrap: wrap;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      & .column-item {
+         width: 25%;
+         margin-bottom: 40px;
+         @media (max-width: 600px) {
+            width: 50%;
+         }
+         @media (max-width: 320px) {
+            width: 100%;
+         }
+         & h3 {
+            font-family: "Montserrat", Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0;
+            margin-top: 0;
+         }
+         & ul {
+            margin: 0;
+            list-style: none;
+            & li {
+               & a {
+                  color: $anchor-font-color-hover;
+                  line-height: 25px;
+                  &:hover {
+                     color: $anchor-font-color;
+                     border-bottom: 1px solid $anchor-font-color;
+                  }
+               }
+               &.more-link a {
+                  color: $anchor-font-color;
+                  font-weight: 700;
+                  font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                  &:hover {
+                     color: $anchor-font-color-hover;
+                     border-bottom: 1px solid $anchor-font-color-hover;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+//Home Brand Slider
+.page-type-default .heroCarousel ~ .container_page #homeBrands {
+   margin-top: -30px;
+}
+
+.body ~ #homeBrands {
+   border-top: 1px solid #dcdcdc;
+}
+
+#homeBrands .container {
+   padding-top: 25px;
+   padding-bottom: 25px;
+}
+
+#homeBrands .owl-carousel {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+#homeBrands .owl-carousel .owl-item a {
+   display: block;
+   text-align: center;
+}
+
+#homeBrands .owl-carousel .owl-item img {
+   display: inline-block;
+}
+
+#homeBrands .owl-nav > div {
+   border: transparent;
+   &.owl-prev {
+      left: -15px;
+   }
+   &.owl-next {
+      right: -15px;
+   }
+}
+
+//Home Instagram Gallery
+#InstagramGallery {
+   padding-top: 50px;
+   padding-bottom: 70px;
+   text-align: center;
+   background: stencilColor('insta-feed-bgColor');
+   border-top: 1px solid #dcdcdc;
+}
+
+#InstagramGallery .widget-title {
+   padding-bottom: 27px;
+}
+
+#InstagramGallery .widget-title h3 {
+   font-family: stencilFontFamily('logo-font');
+   font-size: 32px;
+   margin-top: 0;
+   margin-bottom: 5px;
+   letter-spacing: 0;
+   text-transform: uppercase;
+}
+
+#InstagramGallery .widget-title p.instagram-desc {
+   line-height: 18px;
+   position: relative;
+   display: inline-block;
+   letter-spacing: .05em;
+   & svg {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+   }
+   & span {
+      display: inline-block;
+      vertical-align: middle;
+      @media (max-width: 640px) {
+         width: 85%;
+         vertical-align: top;
+      }
+   }
+}
+
+#InstagramGallery .owl-item > a {
+   display: block;
+}
+
+#InstagramGallery a.insta-btn {
+   margin-top: 40px;
+   min-width: 210px;
+}
+
+#InstagramGallery .feed-item::before {
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   content: '';
+   -webkit-transition: all .3s ease 0s;
+   -moz-transition: all .3s ease 0s;
+   -ms-transition: all .3s ease 0s;
+   -o-transition: all .3s ease 0s;
+   transition: all .3s ease 0s;
+   opacity: .8;
+   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 53%, rgba(0, 0, 0, .81) 97%);
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(53%, rgba(0, 0, 0, 0)), color-stop(97%, rgba(0, 0, 0, .81)));
+   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 53%, rgba(0, 0, 0, .81) 97%);
+   background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 53%, rgba(0, 0, 0, .81) 97%);
+   background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 53%, rgba(0, 0, 0, .81) 97%);
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 53%, rgba(0, 0, 0, .81) 97%);
+}
+
+#InstagramGallery .feed-item:hover::before {
+   -webkit-transition: all .3s ease 0s;
+   -moz-transition: all .3s ease 0s;
+   -ms-transition: all .3s ease 0s;
+   -o-transition: all .3s ease 0s;
+   transition: all .3s ease 0s;
+   background: rgba(255, 255, 255, .7);
+}
+
+#InstagramGallery .feed-item .feed-action {
+   position: absolute;
+   top: 50%;
+   right: 0;
+   left: 0;
+   visibility: hidden;
+   -webkit-transition: all .3s ease 0s;
+   -moz-transition: all .3s ease 0s;
+   -ms-transition: all .3s ease 0s;
+   -o-transition: all .3s ease 0s;
+   transition: all .3s ease 0s;
+   -webkit-transform: translateY(-50%);
+   -moz-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   -o-transform: translateY(-50%);
+   transform: translateY(-50%);
+   opacity: 0;
+   filter: alpha(opacity=0);
+}
+
+#InstagramGallery .feed-item:hover .feed-action {
+   visibility: visible;
+   -webkit-transition: all .3s ease 0s;
+   -moz-transition: all .3s ease 0s;
+   -ms-transition: all .3s ease 0s;
+   -o-transition: all .3s ease 0s;
+   transition: all .3s ease 0s;
+   opacity: 1;
+   filter: alpha(opacity=100);
+}
+
+#InstagramGallery .feed-item .feed-action .btn {
+   font-size: 14px;
+   width: 36px;
+   margin: 3px;
+   padding-right: 0;
+   padding-left: 0;
+   text-align: center;
+}
+
+.mfp-gallery figure > figcaption {
+   margin: 0;
+}
+
+//Contact Store Location
+.page-type-page_contact_form .storeLocation h3 {
+   font-family: $fontFamily-headings;
+   font-size: 16px;
+   font-weight: 700;
+   margin-top: 0;
+   margin-bottom: 20px;
+   padding-top: 0px;
+   padding-bottom: 10px;
+   border-bottom: 1px solid #dcdcdc;
+}
+
+.page-type-page_contact_form .storeLocation {
+   padding-bottom: 30px;
+   color: #000;
+   & a {
+      color: $anchor-font-color-hover;
+      &:hover {
+         color: $anchor-font-color;
+      }
+   }
+}
+
+.page-type-page_contact_form .storeLocation .store-address {
+   padding-bottom: 20px;
+}
+
+.page-type-page_contact_form .storeLocation .store-phone {
+   padding-bottom: 20px;
+}
+
+.page-type-page_contact_form .storeLocation label {
+   padding-bottom: 10px;
+}
+
+@media (min-width: 767px) {
+   .page-type-page_contact_form .page-content > .row > .col-sm-8 {
+      padding-right: 100px;
+   }
+}
+
+#google-map {
+   margin-top: 20px;
+}
+
+
+/*Halo Newsletter Popup*/
+
+#halo-newsletter-popup {
+   position: relative;
+   z-index: 9999;
+}
+
+#halo-newsletter-popup .popup-overlay {
+   position: fixed;
+   z-index: 10000;
+   top: 0;
+   left: 0;
+   overflow: hidden;
+   width: 100%;
+   height: 100%;
+   opacity: .8;
+   background: rgb(45, 45, 50);
+   filter: alpha(opacity=80);
+}
+
+.newsletter-popup-container {
+   position: fixed;
+   z-index: 10000;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   padding: 40px 16px;
+   text-align: center;
+}
+
+.newsletter-popup-inner {
+   display: -webkit-box;
+   /* OLD - iOS 6-, Safari 3.1-6 */
+   display: -moz-box;
+   /* OLD - Firefox 19- (buggy but mostly works) */
+   display: -ms-flexbox;
+   /* TWEENER - IE 10 */
+   display: -webkit-flex;
+   /* NEW - Chrome */
+   display: flex;
+   /* NEW, Spec - Opera 12.1, Firefox 20+ */
+   justify-content: space-between;
+   position: relative;
+   z-index: 10000;
+   top: 50%;
+   width: 100%;
+   min-width: 288px;
+   max-width: 946px;
+   height: 380px;
+   margin: 0 auto;
+   -webkit-transform: translateY(-50%);
+   -moz-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   -o-transform: translateY(-50%);
+   transform: translateY(-50%);
+   text-align: left;
+   vertical-align: middle;
+   background: #fff;
+   box-shadow: 0 0 8px rgba(0, 0, 0, .6);
+   & [data-close-newsletter-popup] {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      background: stencilColor("button--modal-close-bgColorHover");
+      padding: 0;
+      font-size: 25px;
+      text-align: center;
+      padding: 0 0 1px;
+      color: stencilColor("button--modal-close-color");
+      &:hover {
+         color: stencilColor("button--modal-close-colorHover");
+         background: stencilColor("button--modal-close-bgColor");
+      }
+   }
+   @media (max-width: 991px) {
+      max-width: 767px;
+   }
+   @media (max-width: 767px) {
+      max-width: 600px;
+      height: 100%;
+      max-height: 400px;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      align-items: center;
+   }
+   @media (max-width: 640px) {
+      height: 100%;
+      & .social-icons {
+         padding-right: 0;
+         margin-bottom: 20px;
+      }
+   }
+}
+
+.newsletter-popup-inner .newsletter-left {
+   width: calc(100% - 420px);
+   padding: 35px 60px 30px 60px;
+   height: 100%;
+   overflow: auto;
+   & h5 {
+      display: none;
+   }
+   @media (min-width: 768px) and (max-width: 991px) {
+      padding: 20px 35px 30px 35px;
+   }
+   @media (max-width: 767px) {
+      width: 100%;
+      text-align: center;
+      padding: 35px 35px 30px 35px;
+   }
+   @media (max-width: 400px) {
+      padding: 25px;
+   }
+   & .social-icons {
+      padding-right: 0;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      @media (max-width: 767px) {
+         justify-content: center;
+      }
+   }
+}
+
+.newsletter-left h2.newsletter-heading {
+   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+   font-size: 32px;
+   position: relative;
+   margin-top: 0;
+   margin-bottom: 8px;
+   letter-spacing: 0;
+   text-transform: uppercase;
+}
+
+.newsletter-left p.newsletter-sub-heading {
+   font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
+   font-size: 14px;
+   font-weight: 700;
+   text-transform: uppercase;
+   margin-bottom: 25px;
+   color: #3c3c3c;
+}
+
+#popupSubcribeForm {
+   margin-bottom: 5px;
+   & form {
+      margin-bottom: 2px;
+      & .form-field {
+         margin-bottom: 0px;
+      }
+      & .form-wrap {
+         display: -webkit-box;
+         /* OLD - iOS 6-, Safari 3.1-6 */
+         display: -moz-box;
+         /* OLD - Firefox 19- (buggy but mostly works) */
+         display: -ms-flexbox;
+         /* TWEENER - IE 10 */
+         display: -webkit-flex;
+         /* NEW - Chrome */
+         display: flex;
+         /* NEW, Spec - Opera 12.1, Firefox 20+ */
+         flex-wrap: wrap;
+         margin-left: -5px;
+         margin-right: -5px;
+         & > div {
+            width: 50%;
+            padding: 0 5px 10px 5px;
+            & input {
+               width: 100%;
+               margin: 0;
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
+               width: 100%;
+            }
+            @media (max-width: 480px) {
+               width: 100%;
+            }
+         }
+      }
+      input[type='email'] {
+         color: #000;
+      }
+      input[type='submit'] {
+         width: 100%;
+         padding-left: 20px;
+         padding-right: 20px;
+         &:hover {
+            background: #fff;
+         }
+         @media (max-width: 991px) {
+            width: 100%;
+         }
+      }
+   }
+}
+
+.newsletter-left #mailistBox {
+   margin-top: 0;
+}
+
+.newsletter-left .newsletter-message {
+   font-size: 12px;
+   line-height: 20px;
+   clear: both;
+   margin-bottom: 0;
+   padding: 15px 0 23px;
+   color: #3c3c3c;
+}
+
+.newsletter-popup-inner .newsletter-right {
+   width: 420px;
+   text-align: right;
+   overflow: hidden;
+   @media (max-width: 767px) {
+      display: none;
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      text-align: center;
+      height: 100%;
+      & > img {
+         -moz-transform: scale(2);
+         -webkit-transform: scale(2);
+         transform: scale(2);
+         opacity: 0.3;
+         filter: alpha(opacity=30);
+      }
+   }
+}
+
+body.has-newsletter {
+   overflow: hidden;
+}
+
+body.is-sticky {
+   @media (min-width: 992px) {
+      header.header {
+         position: fixed;
+         top: 0;
+         left: 0;
+         right: 0;
+         z-index: 1000;
+         -webkit-animation-name: fadeInDown;
+         animation-name: fadeInDown;
+         -webkit-animation-duration: 1s;
+         animation-duration: 1s;
+         -webkit-animation-fill-mode: both;
+         animation-fill-mode: both;
+         & .header-top {
+            display: none;
+         }
+         & .header-bottom {
+            display: none;
+         }
+      }
+   }
+}
+
+@media (max-width: 991px) {
+   .st-pusher > .body {
+      margin-top: 0 !important;
+   }
+}
+
+#CartEditProductFieldsForm {
+   padding-bottom: 30px;
+}
+
+.no-js .owl-carousel {
+   display: none;
+}
+
+
+/*Halo Ask An Expert*/
+
+button[data-reveal-id="halo-ask-an-expert-form"] {
+   position: fixed;
+   bottom: 50px;
+   right: 0;
+   padding: 0;
+   z-index: 99;
+   @media (max-width: 767px) {
+        right: -8px;
+   }
+}
+
+#halo-ask-an-expert-form {
+   min-height: 120px;
+   max-width: 786px;
+   width: 100%;
+   right: auto;
+   @media (max-width: 991px) {
+      max-width: 600px;
+   }
+   .modal-close {
+      background: stencilColor("button--modal-close-bgColorHover");
+      &:hover {
+         background: stencilColor("button--modal-close-bgColor");
+      }
+   }
+   .modal-header {
+      h2 {
+         font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+         font-size: 32px;
+      }
+      padding: 0;
+      height: 92px;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      justify-content: center;
+      align-items: center;
+      background: #f5f5f5;
+      border-bottom: 0;
+   }
+   & .alert {
+      text-align: center;
+      font-size: 14px;
+      font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
+      margin-bottom: 0;
+   }
+   & .form-inner {
+      max-width: 500px;
+      margin: 0 auto;
+      & h3 {
+         font-family: $fontFamily-headings;
+         font-size: 14px;
+         font-weight: 600;
+         text-transform: uppercase;
+         color: #3c3c3c;
+         text-align: center;
+         line-height: 20px;
+         margin: 0 0 20px;
+      }
+      & .sub-title {
+         text-align: center;
+         color: #3c3c3c;
+         font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
+         font-size: 14px;
+         border-bottom: 1px solid #d7d7d7;
+         padding-bottom: 25px;
+         margin-bottom: 25px;
+      }
+      & .sub-title-question {
+         font-family: $fontFamily-headings;
+         font-size: 14px;
+         font-weight: 600;
+         text-transform: uppercase;
+         color: #3c3c3c;
+         text-align: center;
+         line-height: 20px;
+         margin: 0 0 25px;
+      }
+   }
+   & .form-field {
+      margin-bottom: 20px;
+   }
+   & .form-label {
+      display: inline-block !important;
+      width: auto;
+      margin-right: 25px;
+      font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      &.label-last {
+         display: block !important;
+         margin-bottom: 20px;
+      }
+   }
+   & .form-input {
+      box-shadow: none;
+      &[name="phone"] {
+         margin-bottom: 10px;
+      }
+      &[name="message"] {
+         margin-bottom: 10px;
+      }
+   }
+   & button.fasubmit {
+      width: 100%;
+      max-width: 100%;
+      height: 42px;
+   }
+}
+
+
+/*Purchase Gift Certificate Form Fields Spacing - Fixed*/
+
+.page-type-giftcertificates {
+   & .form-row .form-fieldset.form-column {
+      & .form-field:not(.form-field-group) {
+         padding-left: 0;
+         padding-right: 0;
+         & textarea {
+            width: 100% !important;
+         }
+      }
+   }
+}
+
+.wow {
+   visibility: hidden;
+}
+.panel-body {
+   background: whitesmoke;
+   border-radius: 3px;
+}

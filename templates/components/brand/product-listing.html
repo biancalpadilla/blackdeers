@@ -1,0 +1,22 @@
+<div class="product-pagination top">
+    {{> components/halothemes/product-display-mode-buttons}}
+    {{> components/common/paginator pagination.brand}}
+</div>
+
+<form action="{{urls.compare}}" method='POST' data-product-compare>
+    {{#if theme_settings.product_list_display_mode '===' 'grid'}}
+        {{> components/products/grid products=brand.products show_compare=brand.show_compare theme_settings=theme_settings columns=theme_settings.categorypage_products_column_count}}
+    {{else}}
+        {{> components/products/list products=brand.products show_compare=brand.show_compare theme_settings=theme_settings columns=theme_settings.categorypage_products_column_count}}
+    {{/if}}
+</form>
+
+<div class="product-pagination bottom">
+
+    {{> components/common/paginator pagination.brand}}
+
+    <div class="compare-link">
+        <a class="btn btn-alt" href="{{urls.compare}}" data-compare-nav>{{lang 'common.compare'}}<span class="countPill countPill--positive countPill--alt"></span></a>
+    </div>
+
+</div>

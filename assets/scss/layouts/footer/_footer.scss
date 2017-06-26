@@ -1,0 +1,538 @@
+// =============================================================================
+// FOOTER (CSS)
+// =============================================================================
+#footer-wrapper {
+    padding-top: 40px;
+    background: stencilColor('footer-backgroundColor');
+}
+
+
+/*Main Footer*/
+
+#main-footer .container {
+    @media (max-width: 991px) {
+        padding-bottom: 0;
+    }
+}
+
+#main-footer .col-1,
+#main-footer .col-2,
+#main-footer .col-3 {
+    float: left;
+    width: 20%;
+    padding: 0 15px;
+    @media (max-width: 991px) {
+        width: 33.33%;
+        margin-bottom: 20px;
+    }
+    @media (max-width: 480px) {
+        width: 50%;
+    }
+    @media (max-width: 320px) {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #main-footer .col-3 {
+        width: 100%;
+    }
+}
+
+#main-footer .col-4 {
+    float: left;
+    width: 40%;
+    padding: 0 15px;
+    @media (max-width: 991px) {
+        width: 100%;
+    }
+}
+
+#main-footer h5 {
+    font-family: $fontFamily-headings;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 19px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: stencilColor('footer-column-heading-color');
+}
+
+.footer-columns {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-wrap: wrap;
+    border-bottom: 1px solid stencilColor('footer-separated-border-color');
+    & .column-item {
+        width: 20%;
+        padding-right: 20px;
+        margin-bottom: 35px;
+        @media (max-width: 991px) {
+            width: 33.33%;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 767px) {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 480px) {
+            width: 100%;
+        }
+        & ul {
+            margin-left: 0;
+            list-style: none;
+            & li {
+                padding: 2px 0px;
+                color: stencilColor('footer-column-text-color');
+                & a {
+                    font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                    color: stencilColor('footer-column-link-color');
+                    &:hover {
+                        border-bottom: 1px solid stencilColor('footer-column-link-color-hover');
+                        color: stencilColor('footer-column-link-color-hover');
+                    }
+                }
+                &.all-brands-link {
+                    padding-top: 15px;
+                    & a {
+                        margin-top: 15px;
+                        color: stencilColor('footer-column-link-color-hover');
+                        font-weight: 700;
+                        &:hover {
+                            border-bottom: 1px solid stencilColor('footer-column-link-color');
+                            color: stencilColor('footer-column-link-color');
+                        }
+                    }
+                }
+            }
+        }
+        &.first ul li {
+            display: -webkit-box;
+            /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;
+            /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;
+            /* TWEENER - IE 10 */
+            display: -webkit-flex;
+            /* NEW - Chrome */
+            display: flex;
+            /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            flex-wrap: nowrap;
+            font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            & > i.fa {
+                width: 36px;
+                min-width: 36px;
+                height: 36px;
+                display: -webkit-box;
+                /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;
+                /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;
+                /* TWEENER - IE 10 */
+                display: -webkit-flex;
+                /* NEW - Chrome */
+                display: flex;
+                /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                align-items: center;
+                justify-content: center;
+                background: stencilColor('footer-phone-email-background-color');
+                color: stencilColor('footer-phone-email-color');
+                font-size: 20px;
+                border-radius: 2px;
+                margin-right: 20px;
+                margin-top: 7px;
+                &.fa-envelope-o::before {
+                    position: relative;
+                    top: -1px;
+                }
+            }
+            & p {
+                line-height: 24px;
+                color: stencilColor('footer-column-text-color');
+            }
+        }
+    }
+}
+
+.bottom-columns {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-wrap: wrap;
+    padding-top: 50px;
+    & .column-item {
+        width: 33.33%;
+        text-align: center;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        @media (max-width: 767px) {
+            width: 100%;
+            border-bottom: 1px solid stencilColor('footer-separated-border-color');
+            padding-bottom: 15px;
+            &:last-child {
+                border: 0;
+            }
+        }
+        & ul {
+            display: -webkit-box;
+            /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;
+            /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;
+            /* TWEENER - IE 10 */
+            display: -webkit-flex;
+            /* NEW - Chrome */
+            display: flex;
+            /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-left: 0;
+            list-style: none;
+            & li {
+                display: inline-block;
+                padding: 2px 5px;
+            }
+        }
+        & .social-icons {
+            padding: 0;
+            margin: 0;
+            & a {
+                width: 44px;
+                height: 44px;
+                &:not(:hover) {
+                    background: #000000;
+                }
+                & svg {
+                    fill: #ffffff;
+                    width: 16px;
+                }
+            }
+        }
+        &.second {
+            & ul {
+                & li {
+                    & + li {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    & p {
+        color: stencilColor('footer-column-text-color');
+    }
+}
+
+
+/*Mailist Box - Newsletter Sign Up*/
+
+#footerSubcribeForm {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid stencilColor('footer-separated-border-color');
+    padding-bottom: 35px;
+    margin-bottom: 55px;
+    & > h5,
+    & > form {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    & > form {
+        & .form-field {
+            margin-bottom: 0;
+        }
+    }
+}
+
+#footerSubcribeForm input[type="text"],
+#footerSubcribeForm input[type="email"] {
+    display: inline-block;
+    width: auto;
+    min-width: 200px;
+    height: 36px;
+    margin-right: 7px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    vertical-align: middle;
+    @media (min-width: 992px) and (max-width: 1199px) {
+        min-width: 238px;
+    }
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+#footerSubcribeForm input[type="submit"] {
+    font-weight: 700;
+    line-height: 36px;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    min-width: 120px;
+    vertical-align: middle;
+    color: stencilColor('footer-subscribe-button-color');
+    background: stencilColor('footer-subscribe-button-bgColor');
+    @media (min-width: 992px) and (max-width: 1199px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+#footerSubcribeForm input[type='submit']:hover {
+    color: stencilColor('footer-subscribe-button-colorHover');
+    background: stencilColor('footer-subscribe-button-bgColorHover');
+}
+
+
+/*Bottom Footer*/
+
+#bottom-footer {
+    background: stencilColor('footer-bottom-background');
+    color: stencilColor('footer-copyright-text-color');
+    padding: 35px 0 90px;
+    line-height: 24px;
+}
+
+#bottom-footer .footer-copyright,
+#bottom-footer .powered-by {
+    display: inline-block;
+}
+
+#bottom-footer .footer-copyright p,
+#bottom-footer .powered-by p,
+#bottom-footer .template-by p {
+    line-height: 20px;
+    margin-bottom: 0;
+    font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+#bottom-footer .footer-copyright p a,
+#bottom-footer .powered-by p a,
+#bottom-footer .template-by p a {
+    color: stencilColor('footer-copyright-link-color');
+}
+
+#bottom-footer .footer-copyright p a:hover,
+#bottom-footer .powered-by p a:hover,
+#bottom-footer .template-by p a:hover {
+    color: stencilColor('footer-copyright-link-colorHover');
+    border-bottom: 1px solid stencilColor('footer-copyright-link-colorHover');
+}
+
+.footer-payment-icons {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    justify-content: center;
+    align-items: center;
+    padding: 4px 0;
+    flex-wrap: wrap;
+    .ips {
+        font-size: 0px;
+        padding: 5px;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    .ips:before {
+        content: ' ';
+        vertical-align: middle;
+        display: inline-block;
+        background-image: url("../icons/payment-sprite.svg");
+        background-repeat: no-repeat;
+        background-size: 78em 577.2em;
+        background-size: 100%;
+    }
+    .no-svg .ips:before {
+        background-image: url("../icons/payment-sprite.png");
+    }
+    .ips.icon-card-amex:before {
+        background-position: 0em -3px;
+        width: 60px;
+        height: 30px;
+    }
+    .ips.icon-card-discover:before {
+        background-position: 0em -107px;
+        width: 80px;
+        height: 30px;
+    }
+    .ips.icon-card-mastercard:before {
+        background-position: 0em -215px;
+        width: 50px;
+        height: 30px;
+    }
+    .ips.icon-card-paypal:before {
+        background-position: 0em -392px;
+        width: 70px;
+        height: 30px;
+    }
+    .ips.icon-card-visa:before {
+        background-position: 0em -375px;
+        width: 55px;
+        height: 30px;
+    }
+}
+
+
+/*Accept Cookies*/
+
+#accept-cookies {
+    position: fixed;
+    z-index: 9999;
+    right: 10px;
+    bottom: 10px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 390px;
+    min-height: 200px;
+    padding: 30px 30px 20px 16px;
+    border: 1px solid #000;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #141414;
+    @media (max-width: 400px) {
+        max-width: 354px;
+    }
+}
+
+#accept-cookies .cookies-inner {
+    padding-left: 54px;
+    background: url('../img/cookie-info.png') top left no-repeat;
+}
+
+#accept-cookies p {
+    font-style: italic;
+    position: relative;
+    top: -5px;
+    letter-spacing: .02em;
+    color: #fff;
+}
+
+#accept-cookies button {
+    font-size: 11px;
+    padding: 0 16px;
+    letter-spacing: .05em;
+}
+
+
+/*Scroll To Top*/
+
+#back-to-top {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 15px;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    justify-content: center;
+    visibility: hidden;
+    /* image replacement properties */
+    overflow: hidden;
+    width: 52px;
+    height: 52px;
+    margin-top: -26px;
+    /* Opacity for IE8 and lower */
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+    white-space: nowrap;
+    font-size: 45px;
+    opacity: 0;
+    background: #000;
+    color: #fff;
+    /* Opacity for Modern Browsers */
+    filter: alpha(opacity=0);
+    border-radius: 3px;
+    @media (max-width: 991px) {
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        align-items: center;
+        margin-top: -18px;
+        font-size: 36px;
+        & i.fa {
+            position: relative;
+            top: -2px;
+        }
+    }
+}
+
+#back-to-top.is-visible,
+#back-to-top.fade-out,
+.no-touch #back-to-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+#back-to-top.is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+    /* Opacity for Modern Browsers */
+    filter: alpha(opacity=100);
+    /* Opacity for IE8 and lower */
+}
+
+#back-to-top.fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+    /* Opacity for Modern Browsers */
+    filter: alpha(opacity=50);
+    /* Opacity for IE8 and lower */
+    &:hover {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+}

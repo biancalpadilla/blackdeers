@@ -1,0 +1,37 @@
+{{#if carousel.slides}}
+<section class="heroCarousel owl-carousel"
+    data-owl='{
+        "nav": {{theme_settings.homepage_carousel_navigation}},
+        "dots": {{theme_settings.homepage_carousel_pagination}},
+        "items": 1,
+        "autoplay": {{theme_settings.homepage_carousel_autoplay}},
+        "autoplayTimeout": {{carousel.swap_frequency}},
+        "autoplayHoverPause": true,
+        "loop": true,
+        "responsiveRefreshRate": 0,
+        "responsive": {
+            "1200": {
+                "items": 2,
+                "autoWidth": true,
+                "center": true
+            }
+        }
+    }'>
+    {{#each carousel.slides}}
+    <div class="heroCarousel-slide slide-item-{{@index}}">
+        <img class="heroCarousel-image" src="{{image}}" alt="{{alt_text}}" title="{{alt_text}}"/>
+        {{#if heading}}
+            {{> components/carousel-content show_background=true}}
+        {{else}}
+            {{#if text}}
+                {{> components/carousel-content show_background=true}}
+            {{else}}
+                {{#if button_text}}
+                    {{> components/carousel-content show_background=false}}
+                {{/if}}
+            {{/if}}
+        {{/if}}
+    </div>
+    {{/each}}
+</section>
+{{/if}}

@@ -1,0 +1,87 @@
+<header class="header" role="banner">
+    <div class="header-top">
+        <div class="header-top-left hidden-xs hidden-sm">
+            <div id="animated-promotion" class="text-left">
+                <ul class="owl-carousel" data-owl='{
+                    "nav": false,
+                    "dots": false,
+                    "items": 1,
+                    "margin": 30,
+                    "autoplay": true,
+                    "autoplayTimeout": 3000,
+                    "autoplayHoverPause": false,
+                    "loop": true,
+                    "responsiveRefreshRate": 0,
+                    "mouseDrag": false,
+                    "animateIn": "fadeInUp",
+                    "animateOut": "fadeOutUp"
+                }'>
+                    <li><strong>Free Shipping</strong> on all Orders. No Minimum Purchases Required*</li>
+                    <li><strong>20% Discount</strong> on Selected Items</li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-top-right text-right">
+            <button type="button" id="mobile-search-toggle" class="visible-xs visible-sm"><svg><use xlink:href="#icon-close"></use></svg><svg><use xlink:href="#icon-search"></use></svg></button>
+            {{> components/common/navigation}}
+        </div>
+
+    </div>
+    <div class="header-middle">
+
+        <div id="st-trigger-effects" class="visible-sm visible-xs">
+            <a data-effect="st-effect-1" href="javascript:void(0);">&nbsp;<svg><use xlink:href="#icon-trigger-bars" /></svg><svg><use xlink:href="#icon-close"></use></svg></a>
+        </div>
+
+        {{#if template_file '===' 'pages/home'}}
+        <h1 class="header-logo animated fadeIn">
+        {{> components/common/store-logo}}
+        </h1> {{else}}
+        <div class="header-logo animated fadeIn">
+            {{> components/common/store-logo}}
+        </div>
+        {{/if}}
+
+        <div class="navPages-container" id="menu" data-menu>
+            {{> components/common/navigation-menu}}
+        </div>
+
+        <div class="header-middle-right">
+            <div id="quickSearch">
+                {{> components/common/quick-search}}
+            </div>
+            {{#if settings.show_wishlist}}
+            <div class="wishlist-link hidden-xs hidden-sm">
+                <a href="{{urls.account.wishlists.all}}"><i class="fa fa-heart-o"></i></a>
+            </div>
+            {{/if}}
+
+            <div id="top-cart" class="top-cart">
+                <a data-cart-preview href="javascript:void(0);">
+                    <span><svg style="height: 28px; width: 28px;"><use xlink:href="#shopping-bag"></use></svg><span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span></span>
+                </a>
+                <div id="cart-preview-dropdown">
+                    <div class="triangle-with-shadow"></div>
+                    <div class="cart-preview-inner">
+                        {{> components/common/cart-preview}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-bottom">
+        <p><strong>Free Ground Shipping on all orders. No minimum purchase required*</strong></p>
+    </div>
+
+</header>
+
+{{#if theme_settings.bigcommerce_banners }}
+    {{#if banners.top}}
+    <div class="banners" data-banner-location="top">
+        <div class="banner">
+            {{{limit banners.top 1}}}
+        </div>
+    </div>
+    {{/if}}
+{{/if}}

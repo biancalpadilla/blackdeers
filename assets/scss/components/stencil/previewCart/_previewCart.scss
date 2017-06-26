@@ -1,0 +1,150 @@
+// =============================================================================
+// PREVIEW CART (CSS)
+// =============================================================================
+//
+// 1. Override server-generated inline-css
+//
+// -----------------------------------------------------------------------------
+#previewModal {
+   @media (min-width: 768px) and (max-width: 991px) {
+      max-width: 768px;
+   }
+}
+
+.previewCart {
+   .productView {
+      @include grid-column(8);
+      display: flex;
+      margin: 0;
+      padding-bottom: 0;
+      padding-top: 0;
+      @media (max-width: 991px) {
+         width: 60%;
+         display: block;
+      }
+      @media (max-width: 767px) {
+         width: 100%;
+         display: block;
+         padding-left: 0;
+         padding-right: 0;
+      }
+   }
+   .productView-image {
+      @include grid-column(5);
+      @media (max-width: 991px) {
+         float: none;
+         margin: 0 auto;
+         max-width: 210px;
+         padding-bottom: 15px;
+      }
+   }
+   .productView-image--cart {
+      align-self: flex-start;
+      margin: 0 auto;
+      width: auto;
+   }
+   .productView-details {
+      @include grid-column(7);
+      @media (max-width: 991px) {
+         padding-left: 0;
+         padding-right: 0;
+         width: 100%;
+         float: none;
+         margin: 0;
+      }
+   }
+   .productView-brand {
+      font-size: 20px;
+      font-family: stencilFontFamily('card-title-font');
+   }
+   .productView-title {
+      margin-top: 0;
+      @media (max-width: 991px) {
+         font-size: 20px;
+      }
+   }
+   .productView-info {
+      padding-bottom: 10px;
+      & .productView-info-name {
+         margin-bottom: 0;
+      }
+      & .productView-info-value {
+         margin-bottom: 0;
+      }
+   }
+   .productView-price {
+      font-family: stencilFontFamily('card-title-font');
+      font-size: 20px;
+      & span {
+        font-weight: 400;
+      }
+   }
+}
+
+.previewCartCheckout {
+   background: container("fill", "dark");
+   padding: spacing("base");
+   text-align: center;
+   @media (min-width: 768px) {
+      @include grid-column(4, $float: right);
+      padding: spacing("single");
+   }
+   p[data-cart-quantity] {
+      font-style: italic;
+      margin-bottom: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #dbdbdb;
+   }
+   .btn {
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+      // scss-lint:disable NestingDepth
+      + .btn,
+      + p {
+         margin-top: 15px;
+      }
+      &.btn-lg {
+         height: 52px;
+      }
+      @media (max-width: 360px) {
+         font-size: 11px;
+      }
+   }
+   @media (min-width: 768px) and (max-width: 991px) {
+      width: 40%;
+   }
+   @media (max-width: 767px) {
+      margin-bottom: 15px;
+   }
+}
+
+.previewCartCheckout-price {
+   display: block;
+   font-size: 24px;
+   margin-top: 10px;
+   font-weight: bold;
+   text-align: center;
+}
+
+.previewCartCheckout-subtotal {
+   display: block;
+   margin-bottom: spacing("single");
+   margin-top: spacing("single");
+}
+
+.previewCartCheckout-additionalCheckoutButtons {
+   p {
+      // scss-lint:disable ImportantRule
+      float: none !important; // 1
+      margin: spacing("third") 0;
+   }
+}
+
+.suggestiveCart {
+   display: none;
+   text-align: center;
+   @include breakpoint("medium") {
+      display: block;
+   }
+}

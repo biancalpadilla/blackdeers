@@ -1,0 +1,98 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    top_sellers:
+         limit: {{theme_settings.side_top_products_count}}
+product:
+    videos:
+        limit: {{theme_settings.productpage_videos_count}}
+    reviews:
+        limit: {{theme_settings.productpage_reviews_count}}
+    related_products:
+        limit: {{theme_settings.productpage_related_products_count}}
+    similar_by_views:
+        limit: {{theme_settings.productpage_similar_by_views_count}}
+---
+
+{{#partial "page"}}
+<div class="container">
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+    {{#each product.shipping_messages}}
+        {{> components/common/alert-info message}}
+    {{/each}}
+    <div class="page row">
+        <main itemscope itemtype="http://schema.org/Product" class="page-content col-sm-12">
+
+            {{> components/products/product-view schema=true}}
+
+            <div class="product-bottom row">
+                <div class="col-sm-6 left">
+                    {{#if product.related_products}}
+                    <div id="relatedProducts" class="module-wrapper">
+                        <h3><span>{{lang 'products.related_products'}}</span></h3>
+                        {{> components/products/related-carousel products=product.related_products columns=3}}
+                    </div>
+                    {{/if}}
+
+                    {{#if product.similar_by_views}}
+                    <div id="similarByViews" class="module-wrapper">
+                        <h3><span>{{lang 'products.similar_by_views'}}</span></h3>
+                        {{> components/products/similar-by-views-carousel products=product.similar_by_views columns=3}}
+                    </div>
+                    {{/if}}
+                </div>
+                <div class="col-sm-6 right">
+
+                    <section class="toggle productDescription" data-accordion-item>
+                        <h3 class="toggle-title">
+                            {{lang 'products.description'}}
+                            <i class="fa fa-angle-down"></i>
+                        </h3>
+
+                        <div class="toggle-content" id="productDescription-content" itemprop="description">
+                            {{{product.description}}}
+                            {{{snippet 'product_description'}}}
+
+                            {{#if product.tags.length}}
+                                <ul class="product-tags">
+                                {{#each product.tags}}
+                                    <li>{{name}}</li>
+                                {{/each}}
+                                </ul>
+                            {{/if}}
+                        </div>
+
+                    </section>
+
+                    {{#if product.warranty}}
+                    <section class="toggle productWarranty" data-accordion-item>
+                        <h3 class="toggle-title">
+                            {{lang 'products.warranty'}}
+                            <i class="fa fa-angle-down"></i>
+                        </h3>
+
+                        <div class="toggle-content" id="productWarranty-content">
+                            {{{product.warranty}}}
+                        </div>
+
+                    </section>
+                    {{/if}}
+
+                    {{#if settings.show_product_reviews}}
+                        {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+                    {{/if}}
+
+                    <!-- BEGIN Custom Product Tab -->
+                    {{>components/halothemes/custom-product-tab}}
+                    <!-- END Custom Product Tab -->
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
+{{/partial}}
+{{> layout/base}}

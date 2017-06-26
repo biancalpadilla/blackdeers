@@ -1,0 +1,172 @@
+// =============================================================================
+// Banners Component
+// =============================================================================
+
+
+// Banners
+// -----------------------------------------------------------------------------
+//
+// Purpose: Control the look and feel of the top and bottom site banners
+//
+// -----------------------------------------------------------------------------
+
+.banners {
+    background-color: stencilColor("color-primary");
+    color: stencilColor("color-white");
+    padding: spacing("half") 0;
+    text-align: center;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    a {
+        color: color("whites", "bright");
+    }
+}
+
+.banner {
+    @include grid-row;
+
+    + .banner {
+        margin-top: spacing("single");
+    }
+}
+
+/*Home Top Banners*/
+
+.banner-item {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.banner-item {
+    & a {
+        position: relative;
+        display: block;
+        text-align: center;
+        &::before {
+            background-color: rgba(255, 255, 255, 0.2);
+            display: block;
+            width: 100%;
+            height: 100%;
+            left: -100%;
+            position: absolute;
+            top: 0;
+            -webkit-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            content: "";
+            z-index: 1;
+        }
+        &:hover::before {
+            left: 0;
+        }
+    }
+
+}
+
+.banner-item .hover-text-bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 15px;
+    right: 15px;
+    padding: 17px 20px 15px;
+    color: #fff;
+    &::before {
+        display: block;
+        background: #000;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    & h5 {
+        margin: 0;
+        padding: 0 0 5px;
+        display: block;
+        font-size: 26px;
+        text-transform: uppercase;
+        position: relative;
+        font-family: stencilFontFamily("logo-font"), Arial, Helvetica, sans-serif;
+        color: #fff;
+        letter-spacing: 0px;
+    }
+    & p {
+        font-size: 14px;
+        color: #fff;
+        position: relative;
+        margin-bottom: 0;
+        font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
+        & i.fa {
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+    }
+    & p.img {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+
+}
+#homeTopBanners {
+    @media (max-width: 767px) {
+        & .col-sm-4.banner-item {
+            max-width: 370px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        & .col-sm-6.banner-item {
+            max-width: 570px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+}
+
+
+/*Home Bottom Banners*/
+#homeBottomBanners {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    & .banner-item .hover-text-bottom {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        & h5 {
+            font-size: 20px;
+            padding-bottom: 0;
+            width: calc(100% - 50px);
+        }
+        & i.fa {
+            width: 50px;
+            text-align: right;
+            position: relative;
+            font-size: 20px;
+        }
+    }
+    @media (max-width: 767px) {
+        & > .container {
+            max-width: 570px;
+        }
+    }
+    @media (max-width: 480px) {
+        & > .container > .row > .col-sm-6:first-of-type > .row:last-of-type {
+            & .banner-item {
+                max-width: 270px;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                float: none;
+            }
+        }
+    }
+
+}

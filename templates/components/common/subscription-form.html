@@ -1,0 +1,16 @@
+<div id="footerSubcribeForm" class="wow fadeIn">
+    <h5>Sign up & Get 10% off your first order</h5>
+    <form class="form" action="{{urls.subscribe.action}}" method="post" id="footerSubcribeFormSubmit">
+        <fieldset class="form-fieldset">
+            <input type="hidden" name="action" value="subscribe">
+            <input type="hidden" name="check" value="1">
+            <div class="form-field">
+                <div class="form-wrap">
+                    <input class="form-input" id="nl_first_name" name="nl_first_name" type="text" value="{{customer.name}}" placeholder="{{lang 'newsletter.your_name_placeholder'}}">
+                    <input class="form-input" id="nl_email" name="nl_email" type="email" value="{{customer.email}}" placeholder="{{lang 'newsletter.email_placeholder'}}">
+                    <input class="btn btn-primary btn-subcribe" type="submit" value="{{lang 'newsletter.subscribe_submit'}}">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

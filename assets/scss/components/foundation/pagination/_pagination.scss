@@ -1,0 +1,149 @@
+// =============================================================================
+// PAGINATION (CSS)
+// =============================================================================
+// Pagination list items
+// -----------------------------------------------------------------------------
+//
+// 1. Centred list via inline-block. Font-size: 0; to remove white-space.
+// 2. Specificity overrides for Foundation's inadequate selectors.
+//
+// -----------------------------------------------------------------------------
+.product-pagination {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    align-items: center;
+    margin-bottom: 30px;
+    &.top .pagination {
+        width: calc(100% - 75px);
+        text-align: center;
+        @media (max-width: 480px) {
+            padding-top: 15px;
+            width: 100%;
+        }
+    }
+    &.bottom {
+        padding-top: 10px;
+    }
+    &.bottom .pagination {
+        width: calc(100% - 150px);
+        text-align: center;
+        @media (max-width: 480px) {
+            width: 100%;
+            padding-bottom: 20px;
+        }
+    }
+    @media (max-width: 480px) {
+        flex-wrap: wrap;
+    }
+}
+
+.page-type-account_recentitems {
+    & .product-pagination.bottom {
+        justify-content: flex-end;
+    }
+}
+
+.pagination-list {
+    @include clearfix;
+    display: inline-block;
+    font-size: 0; // 1
+    margin-bottom: 0;
+    text-align: center;
+    .pagination-item {
+        // 2
+        display: inline-block;
+        margin: 0;
+        padding: 5px 7px;
+        cursor: default;
+        & a {
+            font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: $anchor-font-color-hover;
+            min-width: 26px;
+            font-weight: 700;
+            border-radius: 0;
+            min-width: 16px;
+            padding: 0;
+            &:hover {
+                text-decoration: none;
+                color: $anchor-font-color;
+            }
+        }
+        &.pagination-item--previous a,
+        &.pagination-item--next a {
+            padding-left: 5px;
+            padding-right: 5px;
+            color: $anchor-font-color;
+            &:hover {
+                color: $anchor-font-color-hover;
+            }
+        }
+        &.pagination-item--current a {
+            color: $anchor-font-color;
+            border-bottom: 1px solid $anchor-font-color;
+        }
+    }
+}
+
+.compare-link {
+    align-self: stretch;
+    isplay: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+    width: 150px;
+    @media (max-width: 600px) {
+        width: 100%;
+        height: 50px;
+        border-width: 1px 0 0 0;
+    }
+    & a {
+        display: flex;
+        align-items: center;
+        padding: 0px 15px;
+        letter-spacing: 0;
+        & .countPill {
+            display: none;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &.link-show {
+        & .countPill {
+            display: inline-block;
+        }
+    }
+}
+
+.compare-link .countPill {
+    display: inline-block;
+    min-width: 24px;
+    margin-left: 10px;
+    padding: 0 4px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: stencilColor('item-count-circle-backgroundColor');
+    color: stencilColor('item-count-circle-color');
+    line-height: 24px;
+    font-size: 11px;
+    font-weight: 400;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
