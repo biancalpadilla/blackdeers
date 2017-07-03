@@ -1,1 +1,19 @@
 /* Custom Styles */
+img {
+  .card-image {
+    max-height: 99%;
+    max-width: 100%;
+  }
+}
+.prod-item {
+  .prod-image {
+    margin-bottom:24px;
+    height:200px;
+  }
+}
+header.promo-bar {
+  span.signup-bar-text {
+    padding: 0 0;
+    font-size: 14px;
+  }
+}

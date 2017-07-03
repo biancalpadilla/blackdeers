@@ -9,12 +9,12 @@ blog:
     recent_posts:
         limit: {{theme_settings.homepage_blog_posts_count}}
 ---
-{{#partial "hero"}}
-    <!--{{#if carousel}}-->
-        <!--{{> components/carousel}}-->
-    <!--{{/if}}-->
+{{!-- {#partial "hero"}}
+ {{#if carousel}} 
+        {{> components/carousel}}
+    {{/if}}
     {{{snippet 'home_content'}}}
-{{/partial}}
+{{/partial}} --}}
 
 {{#partial "page"}}
 
@@ -25,12 +25,17 @@ blog:
 <div class="main full">
 
     <!-- BEGIN Home Brand Slider -->
-    {{> components/halothemes/home-brand-slider}}
+    {{!-- {{> components/halothemes/home-brand-slider}} --}}
     <!-- END Home Brand Slider -->
 
+    <!-- BEGIN Home Bottom Banners -->
+    {{> components/halothemes/home-bottom-banners}}
+    <!-- END Home Bottom Banners -->
+
     <!-- BEGIN Home Top Banners -->
-    <!--{{> components/halothemes/home-top-banners}}-->
+    {{!-- {{> components/halothemes/home-top-banners}} --}}
     <!-- END Home Top Banners -->
+
 
     {{#if products.featured}}
         {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
@@ -44,9 +49,6 @@ blog:
     {{> components/halothemes/home-shop-by-category}}
     <!-- END Shop By Category // Static  Block -->
 
-    <!-- BEGIN Home Bottom Banners -->
-    {{> components/halothemes/home-bottom-banners}}
-    <!-- END Home Bottom Banners -->
 
     <!-- BEGIN Home Instagram Gallery -->
     <!-- {{> components/halothemes/home-instagram}} -->

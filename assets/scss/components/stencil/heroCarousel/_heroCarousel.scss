@@ -62,9 +62,13 @@
 }
 
 .owl-carousel .owl-item img {
+    max-height:100%;
     max-width: 100%;
     width: auto;
     transform-style: unset;
+    @media (max-width: 480px) {
+        max-height:70%;
+    }
 }
 
 .heroCarousel {

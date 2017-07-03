@@ -257,7 +257,7 @@
         flex-wrap: wrap;
         justify-content: center;
         @media (max-width: 480px) {
-            min-height: auto;
+            height: 250px;
             & .actions {
                 width: 100%;
             }

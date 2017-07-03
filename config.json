@@ -35,7 +35,7 @@
     "last 3 versions"
   ],
   "settings": {
-    "amp_analytics_id": "",
+    "amp_analytics_id": "UA-83847472-2",
     "homepage_new_products_count": 40,
     "homepage_featured_products_count": 10,
     "homepage_show_carousel": true,
@@ -75,7 +75,7 @@
     "side_top_products_count": 8,
     "brandpage_products_per_page": 16,
     "searchpage_products_per_page": 20,
-    "show_product_quick_view": true,
+    "show_product_quick_view": false,
     "show_product_brand": false,
     "show_copyright_footer": true,
     "show_powered_by": false,
@@ -329,7 +329,7 @@
     "halothemes_megamenu": true,
     "halothemes_lazy_loading_effect": true,
     "copyright_alignment": "center",
-    "halothemes_images_swap": false,
+    "halothemes_images_swap": true,
     "halo_ask_an_expert": false,
     "halothemes_contact_us_map": true,
     "breadcrumb-label-color": "#178dc9",
@@ -345,7 +345,7 @@
     "show_geotrust_ssl_seal": false,
     "geotrust_ssl_seal_size": "M",
     "show_subcategories": false,
-    "bigcommerce_banners": false
+    "bigcommerce_banners": true
   },
   "read_only_files": [
     "/assets/scss/components/citadel",
