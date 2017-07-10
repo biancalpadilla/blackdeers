@@ -6,88 +6,169 @@ jQuery(document).ready(function($) {
     /* Megamenu Settings */
 
     //WOMEN
-    menuItem(2).HaloMegaMenu({
-        dropAlign: 'fullWidth',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
-        dropWidth: '800px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
-        dropType: 'imageRight',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
-        cateAreaWidth: '65%',     // width of categories area
-        imageAreaWidth: '35%',    // width of images area
-        cateColumns: 3,           // columns of categories area - max 5 columns
-        // contents for images column (HTML supported)
-        images: '<a href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-image-1.jpg"/></a>'
-    });
+//    menuItem(2).HaloMegaMenu({
+//        dropAlign: 'fullWidth',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+//        dropWidth: '800px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+//        dropType: 'imageRight',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+//        cateAreaWidth: '65%',     // width of categories area
+//        imageAreaWidth: '35%',    // width of images area
+//        cateColumns: 3,           // columns of categories area - max 5 columns
+//        // contents for images column (HTML supported)
+//        images: '<a href="#placeholder_link"><img class="hover" src="/product_images/uploaded_images/megamenu-image-1.jpg"/></a>'
+//    });
 
 
     //MEN
-    menuItem(3).HaloMegaMenu({
-        dropAlign: 'fullWidth',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
-        dropWidth: '800px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
-        dropType: 'imageRight',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
-        cateAreaWidth: '50%',     // width of categories area
-        imageAreaWidth: '50%',    // width of images area
-        cateColumns: 2,           // columns of categories area - max 5 columns
-        // contents for images column (HTML supported)
-        images: '<div class="col-left">\
-                    <a href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-image-2.jpg"/></a>\
-                    <a href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-image-3.jpg"/></a>\
-                </div>\
-                <div class="col-right">\
-                    <a href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-image-4.jpg"/></a>\
-                </div>\
-                <div class="shop-by-brands">\
-                    <label>Shop By Brands</label>\
-                    <ul>\
-                        <li><a href="#placeholder_link"><img src="/product_images/uploaded_images/brand-logo-1.jpg" alt=""></a></li>\
-                        <li><a href="#placeholder_link"><img src="/product_images/uploaded_images/brand-logo-2.jpg" alt=""></a></li>\
-                        <li><a href="#placeholder_link"><img src="/product_images/uploaded_images/brand-logo-3.jpg" alt=""></a></li>\
-                    </ul>\
-                </div>'
-    });
+//    menuItem(3).HaloMegaMenu({
+//        dropAlign: 'fullWidth',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+//        dropWidth: '800px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+//        dropType: 'imageRight',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+//        cateAreaWidth: '50%',     // width of categories area
+//        imageAreaWidth: '50%',    // width of images area
+//        cateColumns: 2,           // columns of categories area - max 5 columns
+//        // contents for images column (HTML supported)
+//        images: '<div class="col-left">\
+//                    <a href="#placeholder_link"><img class="hover" src="/product_images/uploaded_images/megamenu-image-2.jpg"/></a>\
+//                    <a href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-image-3.jpg"/></a>\
+//                </div>\
+//                <div class="col-right">\
+//                    <a href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-image-4.jpg"/></a>\
+//                </div>\
+//                <div class="shop-by-brands">\
+//                    <label>Shop By Brands</label>\
+//                    <ul>\
+//                        <li><a href="#placeholder_link"><img src="/product_images/uploaded_images/brand-logo-1.jpg" alt=""></a></li>\
+//                        <li><a href="#placeholder_link"><img src="/product_images/uploaded_images/brand-logo-2.jpg" alt=""></a></li>\
+//                        <li><a href="#placeholder_link"><img src="/product_images/uploaded_images/brand-logo-3.jpg" alt=""></a></li>\
+//                    </ul>\
+//                </div>'
+//    });
 
 
     //SNOWBOARD
+//    menuItem(4).HaloMegaMenu({
+//        dropAlign: 'fullWidth',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+//        dropWidth: '800px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+//        dropType: 'imageRight',    // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+//        cateAreaWidth: '60%',     // width of categories area
+//        imageAreaWidth: '40%',    // width of images area
+//        cateColumns: 3,           // columns of categories area - max 5 columns
+//        bottomCates: '<a href="#placeholder_link" title=""><img src="/product_images/uploaded_images/megamenu-image-bottom.jpg" alt="" /></a>',
+//        // contents for images column (HTML supported)
+//        images: '<div class="featured-categories">\
+//                    <h4>Featured Categories</h4>\
+//                    <ul class="owl-carousel">\
+//                        <li class="cate-item">\
+//                            <a class="cate-img" href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-product-image-1.jpg" alt="Cosmopolis" /></a>\
+//                            <a class="cate-name" href="#placeholder_link">Cosmopolis</a>\
+//                            <p class="cate-desc">Phasellus lorem malesuada ligula pulvinar commodo maecenas suscipit auctom</p>\
+//                            <a class="cate-shop-now" href="#placeholder_link">Shop Now</a>\
+//                        </li>\
+//                        <li class="cate-item">\
+//                            <a class="cate-img" href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-product-image-2.jpg" alt="Cosmopolis" /></a>\
+//                            <a class="cate-name" href="#placeholder_link">Cosmopolis</a>\
+//                            <p class="cate-desc">Phasellus lorem malesuada ligula pulvinar commodo maecenas suscipit auctom</p>\
+//                            <a class="cate-shop-now" href="#placeholder_link" title="Shop Now">Shop Now</a>\
+//                        </li>\
+//                        <li class="cate-item">\
+//                            <a class="cate-img" href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-product-image-1.jpg" alt="Cosmopolis" /></a>\
+//                            <a class="cate-name" href="#placeholder_link">Cosmopolis</a>\
+//                            <p class="cate-desc">Phasellus lorem malesuada ligula pulvinar commodo maecenas suscipit auctom</p>\
+//                            <a class="cate-shop-now" href="#placeholder_link" title="Shop Now">Shop Now</a>\
+//                        </li>\
+//                        <li class="cate-item">\
+//                            <a class="cate-img" href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-product-image-2.jpg" alt="Cosmopolis" /></a>\
+//                            <a class="cate-name" href="#placeholder_link">Cosmopolis</a>\
+//                            <p class="cate-desc">Phasellus lorem malesuada ligula pulvinar commodo maecenas suscipit auctom</p>\
+//                            <a class="cate-shop-now" href="#placeholder_link" title="Shop Now">Shop Now</a>\
+//                        </li>\
+//                    </ul>\
+//                </div>'
+//    });
+
+    // DIAPERS
+    menuItem(1).HaloMegaMenu({
+        dropAlign: 'fullWidth',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '800px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'imageTop',     // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '0%',     // width of images area
+        cateAreaWidth: '100%',    // width of categories area
+        cateColumns: 4,           // columns of categories area - max 5 columns
+        // contents for images column (HTML supported)
+        imagesTop: [
+            '<a href="/adult-diapers/overnight" title="overnight diapers for adults"><img class="hover" src="/product_images/uploaded_images/overnight-adult-diapers-nav.png" title="overnight adult diapers"/></a>',
+            '<a href="/adult-diapers/womens" title="diapers for women"><img class="hover" src="/product_images/uploaded_images/womens-adult-diapers-nav.png" title="adult diapers for women"/></a>',
+            '<a href="/adult-diapers/mens" title="diapers for men"><img class="hover" src="/product_images/uploaded_images/mens-adult-diapers-nav.png" title="adult diapers for men"/></a>',
+            '<a href="/adult-diapers/unisex" title="diapers unisex for adults"><img class="hover" src="/product_images/uploaded_images/unisex-adult-diapers-nav.png" title="adult diapers unisex"/></a>',
+            '<a href="/adult-diapers/bowel" title="diapers for bowel or fecal"><img class="hover" src="/product_images/uploaded_images/bowel-fecal-adult-diapers-nav.png" title="adult diapers for bowel or fecal incontinence"/></a>',
+            '<a href="/adult-diapers/obesity" title="diapers for obese"><img class="hover" src="/product_images/uploaded_images/bariatric-2xl-4xl-diapers-nav.png" title="adult diapers in sizes 2xl 3xl 4xl for obesity or bariatric"/></a>',
+            '<a href="/adult-diapers/booster-pads-doublers" title="booster pads for diapers"><img class="hover" src="/product_images/uploaded_images/booster-pads-for-diapers-nav.png" title="booster pads or doublers to wear inside of diapers"/></a>',
+            '<a href="/adult-diapers/baby-youth" title="baby and youth size diapers cuties and comfees brand"><img class="hover" src="/product_images/uploaded_images/baby-diapers-nav.png" title="diapers for babies and youth with disabilities"/></a>'
+        ]
+    });
+
+    // PULL UP DIAPERS
+    menuItem(2).HaloMegaMenu({
+        dropAlign: 'fullWidth',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '800px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'imageTop',     // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '0%',     // width of images area
+        cateAreaWidth: '100%',    // width of categories area
+        cateColumns: 4,           // columns of categories area - max 5 columns
+        // contents for images column (HTML supported)
+        imagesTop: [
+            '<a href="/pull-up-diapers/overnight" title="overnight pull up diaper underwear for adults"><img class="hover" src="/product_images/uploaded_images/overnight-adult-pull-up-diapers-nav.png" title="overnight pull up adult diaper underwear"/></a>',
+            '<a href="/pull-up-diapers/womens" title="pull up diaper underwear for women"><img class="hover" src="/product_images/uploaded_images/womens-adult-pull-up-diapers-nav.png" title="adult pull up diaper underwear for women"/></a>',
+            '<a href="/pull-up-diapers/mens" title="pull up diaper underwear for men"><img class="hover" src="/product_images/uploaded_images/mens-adult-pull-up-diapers-nav.png" title="adult pull up diaper underwear for men"/></a>',
+            '<a href="/pull-up-diapers/unisex" title="pull up diaper underwear unisex for adults"><img class="hover" src="/product_images/uploaded_images/unisex-adult-pull-up-diapers-nav.png" title="adult pull up diaper underwear unisex"/></a>',
+            '<a href="/pull-up-diapers/bowel" title="pull up diaper underwear for bowel or fecal"><img class="hover" src="/product_images/uploaded_images/bowel-fecal-adult-pull-up-diapers-nav.png" title="adult pull up diaper underwear for bowel or fecal incontinence"/></a>',
+            '<a href="/pull-up-diapers/obesity" title="pull up diaper underwear for obese"><img class="hover" src="/product_images/uploaded_images/bariatric-2xl-4xl-pull-up-diapers-nav.png" title="adult pull up diaper underwear in sizes 2xl 3xl 4xl for obesity or bariatric"/></a>',
+            '<a href="/pull-up-diapers/booster-pads-doublers" title="booster pads for pull up diaper underwear"><img class="hover" src="/product_images/uploaded_images/booster-pads-for-pull-up-diapers-nav.png" title="booster pads or doublers to wear inside of pull up diaper underwear"/></a>',
+            '<a href="/pull-up-diapers/baby-youth" title="baby and youth size pull up diapers cuties and comfees brand"><img class="hover" src="/product_images/uploaded_images/youth-pull-up-diapers-nav.png" title="pull up diaper for babies and youth with disabilities"/></a>'
+        ]
+    });
+
+    // PADS & UNDERPADS
+    menuItem(3).HaloMegaMenu({
+        dropAlign: 'fullWidth',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '800px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'imageTop',     // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '0%',     // width of images area
+        cateAreaWidth: '100%',    // width of categories area
+        cateColumns: 4,           // columns of categories area - max 5 columns
+        // contents for images column (HTML supported)
+        imagesTop: [
+            '<a href="/pads-underpads/womens-bladder-pads" title="womens bladder control pads for light incontinence"><img class="hover" title="bladder control pads for women with light incontinence" src="/product_images/uploaded_images/womens-bladder-control-pads.png"/></a>',
+            '<a href="/pads-underpads/mens-guards-shields" title="male guards for light incotinence in men"><img class="hover" title="" src="/product_images/uploaded_images/male-incontinence-guards.png"/></a>',
+            '<a href="/pads-underpads/light-bowel-pads" title="light bowel pads for colitis and other stomach conditions"><img class="hover" title="" src="/product_images/uploaded_images/bowel-fecal-pads.png"/></a>',
+            '<a href="/pads-underpads/liners-shaped-pads" title="incontinence liners and shaped bladder pads to wear inside underwear"><img class="hover" title="" src="/product_images/uploaded_images/shaped-bladder-incontinence-pads.png"/></a>',
+            '<a href="/pads-underpads/booster-pads-doublers" title="booster pads and diaper doublers to wear inside diaper"><img class="hover" title="" src="/product_images/uploaded_images/booster-pads-doublers.png"/></a>',
+            '<a href="/pads-underpads/disposable-underpads" title="underpads chux disposable to protect bed, chair or furniture"><img class="hover" title="" src="/product_images/uploaded_images/disposable-chux-underpads.png"/></a>',
+            '<a href="/pads-underpads/reusable-underpads" title="washable reusable underpads for bed, chairs, or furniture"><img class="hover" title="" src="/product_images/uploaded_images/reusable-washable-bed-pads.png"/></a>',
+            '<a href="/pads-underpads/baby-changing-pads" title="disposable baby changing pads"><img class="hover" title="" src="/product_images/uploaded_images/baby-changing-pad.png"/></a>'
+        ]
+    });
+
+    // PERSONAL CARE
     menuItem(4).HaloMegaMenu({
         dropAlign: 'fullWidth',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
         dropWidth: '800px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
-        dropType: 'imageRight',    // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
-        cateAreaWidth: '60%',     // width of categories area
-        imageAreaWidth: '40%',    // width of images area
-        cateColumns: 3,           // columns of categories area - max 5 columns
-        bottomCates: '<a href="#placeholder_link" title=""><img src="/product_images/uploaded_images/megamenu-image-bottom.jpg" alt="" /></a>',
+        dropType: 'imageTop',     // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '0%',     // width of images area
+        cateAreaWidth: '100%',    // width of categories area
+        cateColumns: 4,           // columns of categories area - max 5 columns
         // contents for images column (HTML supported)
-        images: '<div class="featured-categories">\
-                    <h4>Featured Categories</h4>\
-                    <ul class="owl-carousel">\
-                        <li class="cate-item">\
-                            <a class="cate-img" href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-product-image-1.jpg" alt="Cosmopolis" /></a>\
-                            <a class="cate-name" href="#placeholder_link">Cosmopolis</a>\
-                            <p class="cate-desc">Phasellus lorem malesuada ligula pulvinar commodo maecenas suscipit auctom</p>\
-                            <a class="cate-shop-now" href="#placeholder_link">Shop Now</a>\
-                        </li>\
-                        <li class="cate-item">\
-                            <a class="cate-img" href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-product-image-2.jpg" alt="Cosmopolis" /></a>\
-                            <a class="cate-name" href="#placeholder_link">Cosmopolis</a>\
-                            <p class="cate-desc">Phasellus lorem malesuada ligula pulvinar commodo maecenas suscipit auctom</p>\
-                            <a class="cate-shop-now" href="#placeholder_link" title="Shop Now">Shop Now</a>\
-                        </li>\
-                        <li class="cate-item">\
-                            <a class="cate-img" href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-product-image-1.jpg" alt="Cosmopolis" /></a>\
-                            <a class="cate-name" href="#placeholder_link">Cosmopolis</a>\
-                            <p class="cate-desc">Phasellus lorem malesuada ligula pulvinar commodo maecenas suscipit auctom</p>\
-                            <a class="cate-shop-now" href="#placeholder_link" title="Shop Now">Shop Now</a>\
-                        </li>\
-                        <li class="cate-item">\
-                            <a class="cate-img" href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-product-image-2.jpg" alt="Cosmopolis" /></a>\
-                            <a class="cate-name" href="#placeholder_link">Cosmopolis</a>\
-                            <p class="cate-desc">Phasellus lorem malesuada ligula pulvinar commodo maecenas suscipit auctom</p>\
-                            <a class="cate-shop-now" href="#placeholder_link" title="Shop Now">Shop Now</a>\
-                        </li>\
-                    </ul>\
-                </div>'
+        imagesTop: [
+            '<a href="/personal-care/wipes-washcloths" title="wipes and washcloths for adults experiencing incontinence"><img title="prevail washcloths with lotion" class="hover" src="/product_images/uploaded_images/wipes-washcloths.png"/></a>',
+            '<a href="/personal-care/gloves" title="latex medical gloves incontinence"><img title="hospital gloves rubber" class="hover" src="/product_images/uploaded_images/gloves.png"/></a>',
+            '<a href="/personal-care/rash-care" title="rash creams and lotions"><img title="creams and ointments for diaper rash" class="hover" src="/product_images/uploaded_images/rash-creams-ointments.png"/></a>',
+            '<a href="/personal-care/skin-care" title="body wash and lotion for adults with incontinence"><img title="tena skin care products for seniors" class="hover" src="/product_images/uploaded_images/skin-care.png"/></a>',
+            '<a href="/personal-care/wound-care" title="wound care products"><img title="gauze and mckesson tape" class="hover" src="/product_images/uploaded_images/wound-care.png"/></a>',
+            '<a href="/personal-care/odor-control" title="odor control products for people with incontinence"><img title="spray and deoderizors for incontinent people" class="hover" src="/product_images/uploaded_images/odor-eliminators.png"/></a>'
+        ]
     });
 
-
-    //HIKE & CAMP
+    // BRANDS
     menuItem(5).HaloMegaMenu({
         dropAlign: 'fullWidth',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
         dropWidth: '800px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
@@ -96,11 +177,50 @@ jQuery(document).ready(function($) {
         cateAreaWidth: '100%',    // width of categories area
         cateColumns: 5,           // columns of categories area - max 5 columns
         // contents for images column (HTML supported)
-        imagesTop: ['<a href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-image-5.jpg"/></a>',
-            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-image-6.jpg"/></a>',
-            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-image-7.jpg"/></a>',
-            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-image-8.jpg"/></a>',
-            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/megamenu-image-9.jpg"/></a>'
+        imagesTop: [
+            '<a href="/brands/Tranquility.html"><img class="hover" src="/product_images/uploaded_images/tranquility-nav.png"/></a>',
+            '<a href="/brands/Prevail.html"><img class="hover" src="/product_images/uploaded_images/prevail-nav.png"/></a>',
+            '<a href="/brands/TENA.html"><img class="hover" src="/product_images/uploaded_images/tena-nav.png"/></a>',
+            '<a href="/brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/abena-nav.png"/></a>',
+            '<a href="/brands/Covidien.html"><img class="hover" src="/product_images/uploaded_images/covidien-nav.png"/></a>',
+            '<a href="/brands/Attends.html"><img class="hover" src="/product_images/uploaded_images/attends-nav.png"/></a>',
+            '<a href="/brands/McKesson.html"><img class="hover" src="/product_images/uploaded_images/mckesson-nav.png"/></a>',
+            '<a href="/brands/Swimmates.html"><img class="hover" src="/product_images/uploaded_images/swimmates-nav.png"/></a>',
+            '<a href="/brands/Cuties.html"><img class="hover" src="/product_images/uploaded_images/cuties-nav.png"/></a>',
+            '<a href="/brands/Comfees.html"><img class="hover" src="/product_images/uploaded_images/comfees-nav.png"/></a>',
+            '<a href="/brands/Depend.html"><img class="hover" src="/product_images/uploaded_images/depend-nav.png"/></a>',
+            '<a href="/brands/Poise.html"><img class="hover" src="/product_images/uploaded_images/poise-nav.png"/></a>'
+        ]
+    });
+
+
+
+
+
+
+    //HIKE & CAMP
+    menuItem(6).HaloMegaMenu({
+        dropAlign: 'fullWidth',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '800px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'imageTop',     // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '0%',     // width of images area
+        cateAreaWidth: '100%',    // width of categories area
+        cateColumns: 5,           // columns of categories area - max 5 columns
+        // contents for images column (HTML supported)
+        imagesTop: [
+            '<a href="/Brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/megamenu-image-8.jpg"/></a>',
+            '<a href="/Brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/megamenu-image-8.jpg"/></a>',
+            '<a href="/Brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/megamenu-image-8.jpg"/></a>',
+            '<a href="/Brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/megamenu-image-8.jpg"/></a>',
+            '<a href="/Brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/megamenu-image-8.jpg"/></a>',
+            '<a href="/Brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/megamenu-image-9.jpg"/></a>',
+            '<a href="/Brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/megamenu-image-8.jpg"/></a>',
+            '<a href="/Brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/megamenu-image-8.jpg"/></a>',
+            '<a href="/Brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/megamenu-image-8.jpg"/></a>',
+            '<a href="/Brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/megamenu-image-8.jpg"/></a>',
+            '<a href="/Brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/megamenu-image-8.jpg"/></a>',
+            '<a href="/Brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/megamenu-image-8.jpg"/></a>',
+            '<a href="/Brands/Abena.html"><img class="hover" src="/product_images/uploaded_images/megamenu-image-9.jpg"/></a>'
         ]
     });
 

@@ -5,6 +5,10 @@ img {
     max-width: 100%;
   }
 }
+img.hover:hover {
+  opacity: .65;
+}
+
 .prod-item {
   .prod-image {
     margin-bottom:24px;
