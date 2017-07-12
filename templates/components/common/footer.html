@@ -29,10 +29,12 @@
                         <li>
                             <i class="fa fa-phone"></i>
                             <p>
-                                <strong>Order by phone <br> {{settings.phone_number}}</strong><br>
-                                Mon to Fri: <br>
-                                11am - 6pm (EST) <br>
-                                Sunday Closed
+                                <strong>Order by phone <br> {{settings.phone_number}}</strong><br><br>
+                                <strong>Mon to Fri:</strong> <br>
+                                10am - 6pm (EST) <br>
+                                <strong>Saturday:</strong> <br>
+                                12am - 5pm (EST) <br>
+                                <strong>Sunday:</strong> Closed
                             </p>
                         </li>
                         <li>
@@ -40,22 +42,21 @@
                             <p>
                                 <strong>Send us an Email</strong><br>
                                 <a href="mailto:support@care.club">Email us <i class="fa fa-hand-o-left"></i></a>
+                                <a href="mailto:support@care.club">support@care.club</a>
                             </p>
                         </li>
                     </ul>
                 </div>
 
                 <div class="column-item wow fadeIn" data-wow-delay="0ms">
-                    <h5>Further Info</h5>
+                    <h5>Care Club</h5>
                     <ul>
-                        <li><a href="/blog/">Blog</a></li>
-                        <li><a href="#placeholder_link">Themes Styles</a></li>
                         <li><a href="/about-us/">About Us</a></li>
-                        <li><a href="/giftcertificates.php">Gift Certificates</a></li>
-                        <li><a href="/rss-syndication/">RSS Syndication</a></li>
-                        <li><a href="/shipping-returns/">Shipping & Returns</a></li>
-                        <li><a href="/sitemap/">Sitemap</a></li>
+                        <li><a href="/blog/">Blog</a></li>
                         <li><a href="/contact-us/">Contact Us</a></li>
+                        <li><a href="#placeholder_link">Care Club Reviews</a></li>
+                        <br/>
+                        <a href="http://www.shopperapproved.com/reviews/care.club/" class="shopperlink"><img src="//www.shopperapproved.com/newseals/25019/white-stats.gif" style="border: 0" alt="Customer Reviews" oncontextmenu="var d = new Date(); alert('Copying Prohibited by Law - This image and all included logos are copyrighted by Shopper Approved \251 '+d.getFullYear()+'.'); return false;" /></a><script type="text/javascript">(function() { var js = window.document.createElement("script"); js.src = '//www.shopperapproved.com/seals/certificate.js'; js.type = "text/javascript"; document.getElementsByTagName("head")[0].appendChild(js); })();</script>
                     </ul>
                 </div>
 
@@ -73,14 +74,14 @@
                 <div class="column-item wow fadeIn" data-wow-delay="0ms">
                     <h5>Our Top Brands</h5>
                     <ul>
-                        <li><a href="/brands/Angry-Birds.html">Angry Birds</a></li>
-                        <li><a href="/brands/BeQuiet.html">BeQuiet</a></li>
-                        <li><a href="/brands/Approx.html">Approx</a></li>
-                        <li><a href="/brands/Alexander-Blackstone.html">Alexander Blackstone</a></li>
-                        <li><a href="/brands/A%252dSolar.html">A-Solar</a></li>
-                        <li><a href="/brands/Bioware-%252d-Adventure-Time.html">Bioware - Adventure Time</a></li>
-                        <li><a href="/brands/Bioware-%252d-Einstein.html">Bioware - Einstein</a></li>
-                        <li><a href="/brands/Aerocool.html">Aerocool</a></li>
+                        <li><a href="/brands/Prevail.html">Prevail</a></li>
+                        <li><a href="/brands/Tranquility.html">Tranquility</a></li>
+                        <li><a href="/brands/TENA.html">TENA</a></li>
+                        <li><a href="/brands/Abena.html">Abena</a></li>
+                        <li><a href="/brands/Covidien.html">Covidien</a></li>
+                        <li><a href="/brands/Attends.html">Attends</a></li>
+                        <li><a href="/brands/McKesson.html">McKesson</a></li>
+                        <li><a href="/brands/cuties/">Cuties</a></li>
                         <li class="all-brands-link"><a href="/brands/">View All Brands</a></li>
                     </ul>
                 </div>
@@ -89,13 +90,11 @@
                     <h5>Customer Service</h5>
                     <ul>
                         <li><a href="#placeholder_link">Help & FAQs</a></li>
-                        <li><a href="/terms-conditions/">Terms &amp; Conditions</a></li>
-                        <li><a href="/privacy-policy/">Privacy Policy</a></li>
-                        <li><a href="#placeholder_link">Online Returns Policy</a></li>
+                        <li><a href="/shipping-returns/">Shipping & Return Policy</a></li>
                         <li><a href="#placeholder_link">Reward Program</a></li>
-                        <li><a href="#placeholder_link">Rebate Center</a></li>
-                        <li><a href="#placeholder_link">Partners</a></li>
-                        <li><a href="#placeholder_link">Testimonials</a></li>
+                        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="/terms-conditions/">Terms &amp; Conditions</a></li>
+                        <li><a href="/sitemap/">Sitemap</a></li>
                     </ul>
                 </div>
 
@@ -106,30 +105,33 @@
             <!-- Begin Three Columns -->
             <div class="bottom-columns">
 
-                <div class="column-item first wow fadeIn" data-wow-delay="0ms">
+                <div class="column-item third wow fadeIn" data-wow-delay="0ms">
+                    <!--<h5>Stay Connected</h5>-->
+                    <!--<p>Follow us to stay up-to-date with news and promotions</p>-->
+                    <!--{{> components/common/social-links}}-->
                     <h5>Shop With Confidence</h5>
-                    <p>Sed menenatis pulvinar sem porta an condimentumos</p>
+                    <p>Your privacy and trust is our top priority. <br> Read more about our <a style="text-decoration:underline;" href="/privacy-policy.html">privacy policy</a>.</p>
+                    {{> components/common/trust-seals}}
+                </div>
+
+                <div class="column-item first wow fadeIn" data-wow-delay="0ms">
+                    <h5>Secure Payments</h5>
+                    <p>Your online payments and personal data will always <br> remain  safe, confidential, and encrypted.</p>
                     {{> components/common/payment-icons}}
                 </div>
 
                 <div class="column-item second wow fadeIn" data-wow-delay="0ms">
                     <h5>Secure Shopping</h5>
-                    <p>Nam condimentum tellus dapibus an cosmopolis</p>
+                    <p>SSL technology protects your data by encrypting all data shared between your computer and our site.</p>
 
                         <ul class="footer-ssl-certificate">
                             {{#if theme_settings.show_geotrust_ssl_seal}}
                             <li>{{> components/common/geotrust-ssl-seal}}</li>
                             {{/if}}
-                            <li><a href="#"><img src="/product_images/uploaded_images/godaddy-certificate.png" alt=""></a></li>
+                            <img alt="McAfee Secure" style="border: 0; padding-right: 5px;" src="/product_images/uploaded_images/mcafee.png" />
                             <li><a href="#"><img src="/product_images/uploaded_images/comodo-certificate.png" alt=""></a></li>
                         </ul>
 
-                </div>
-
-                <div class="column-item third wow fadeIn" data-wow-delay="0ms">
-                    <h5>Stay Connected</h5>
-                    <p>Duis luctus lorem dapibus euismod multricies duomus</p>
-                    {{> components/common/social-links}}
                 </div>
 
             </div>

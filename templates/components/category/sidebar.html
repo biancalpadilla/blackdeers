@@ -14,7 +14,7 @@
     {{/if}}
 
     <!-- BEGIN Side All Categories -->
-    {{> components/halothemes/side-all-categories}}
+    {{!-- {{> components/halothemes/side-all-categories}} --}}
     <!-- END Side All Categories -->
 
     {{#if category.faceted_search_enabled}}
@@ -26,9 +26,9 @@
     {{#if brand.faceted_search_enabled}}
         {{> components/faceted-search/index brand}}
     {{else}}
-        {{#if shop_by_brand}}
+        {{!-- {{#if shop_by_brand}}
             {{> components/category/side-shop-by-brand}}
-        {{/if}}
+        {{/if}} --}}
     {{/if}}
 
     <!-- BEGIN Side Top Seller -->
