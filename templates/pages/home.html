@@ -9,12 +9,12 @@ blog:
     recent_posts:
         limit: {{theme_settings.homepage_blog_posts_count}}
 ---
- {{#partial "hero"}}
+ {{!-- {{#partial "hero"}}
  {{#if carousel}} 
         {{> components/carousel}}
     {{/if}}
     {{{snippet 'home_content'}}}
-{{/partial}}
+{{/partial}} --}}
 
 {{#partial "page"}}
 
@@ -40,14 +40,15 @@ blog:
         {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
     {{/if}}
 
-    <!-- BEGIN Shop By Category // Static Block -->
-    {{> components/halothemes/home-shop-by-category}}
-    <!-- END Shop By Category // Static  Block -->
 
+    {{> components/halothemes/learn-about-incontinence}}
     <!-- BEGIN Home Bottom Banners -->
     {{!-- {{> components/halothemes/home-bottom-banners}} --}}
     <!-- END Home Bottom Banners -->
 
+    <!-- BEGIN Shop By Category // Static Block -->
+    {{> components/halothemes/home-shop-by-category}}
+    <!-- END Shop By Category // Static  Block -->
 
     <!-- BEGIN Home Instagram Gallery -->
     {{!-- {{> components/halothemes/home-instagram}} --}}
