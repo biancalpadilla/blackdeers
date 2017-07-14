@@ -134,7 +134,10 @@
                             {{/or}}
                         </div>
                     {{/if}}
-                    {{product.detail_messages}}
+
+                <p>In stock <i style="color:forestgreen;" class="fa fa-check" aria-hidden="true"></i></p>
+
+                {{product.detail_messages}}
                     <dl class="productView-info">
                         {{#if product.sku}}
                             <dt class="productView-info-name">{{lang 'products.sku'}}</dt>
@@ -294,7 +297,7 @@
                     {{/if}}
                 </div>
 
-                {{>components/common/share}}
+                {{!-- >components/common/share --}}
                 {{{snippet 'product_details'}}}
             </section>
         </div>
