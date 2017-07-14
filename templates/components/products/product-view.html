@@ -135,46 +135,13 @@
                         </div>
                     {{/if}}
 
-                <p>In stock <i style="color:forestgreen;" class="fa fa-check" aria-hidden="true"></i></p>
-
                 {{product.detail_messages}}
                     <dl class="productView-info">
                         {{#if product.sku}}
                             <dt class="productView-info-name">{{lang 'products.sku'}}</dt>
                             <dd class="productView-info-value" data-product-sku>{{product.sku}}</dd>
                         {{/if}}
-                        {{#if product.upc}}
-                            <dt class="productView-info-name">{{lang 'products.upc'}}</dt>
-                            <dd class="productView-info-value" data-product-upc>{{product.upc}}</dd>
-                        {{/if}}
-                        {{#if product.condition}}
-                            <dt class="productView-info-name">{{lang 'products.condition'}}</dt>
-                            <dd class="productView-info-value">{{product.condition}}</dd>
-                        {{/if}}
-                        {{#if product.brand}}
-                            <dt class="productView-info-name">{{lang 'halothemes.brand'}}</dt>
-                            <dd class="productView-info-value productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}><a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a></dd>
-                        {{/if}}
-                        {{#if product.availability}}
-                            <dt class="productView-info-name">{{lang 'products.availability'}}</dt>
-                            <dd class="productView-info-value">{{product.availability}}</dd>
-                        {{/if}}
-                        {{#if product.weight}}
-                            <dt class="productView-info-name">{{lang 'products.weight'}}</dt>
-                            <dd class="productView-info-value" data-product-weight>{{product.weight}}</dd>
-                        {{/if}}
-                        {{#if product.min_purchase_quantity}}
-                            <dt class="productView-info-name">{{lang 'products.min_purchase_quantity'}}</dt>
-                            <dd class="productView-info-value">{{lang 'products.purchase_units' quantity=product.min_purchase_quantity}}</dd>
-                        {{/if}}
-                        {{#if product.max_purchase_quantity}}
-                            <dt class="productView-info-name">{{lang 'products.max_purchase_quantity'}}</dt>
-                            <dd class="productView-info-value">{{lang 'products.purchase_units' quantity=product.max_purchase_quantity}}</dd>
-                        {{/if}}
-                        {{#if product.gift_wrapping_available}}
-                            <dt class="productView-info-name">{{lang 'products.gift_wrapping'}}</dt>
-                            <dd class="productView-info-value">{{lang 'products.gift_wrapping_available'}}</dd>
-                        {{/if}}
+                        <br/>
                         {{#if product.shipping}}
                             {{#if product.shipping.calculated}}
                                 <dt class="productView-info-name">{{lang 'products.shipping'}}</dt>
@@ -225,12 +192,10 @@
                             </div>
                         {{/if}}
 
-                        {{#each product.custom_fields}}
-                            <dt class="productView-info-name" data-custom-field-name="{{name}}">{{name}}:</dt>
-                            <dd class="productView-info-value" data-custom-field-name="{{name}}">{{{value}}}</dd>
-                        {{/each}}
                     </dl>
-                    <div class="productView-summary">
+                <p><strong>In stock</strong>, ready to ship <i style="color:forestgreen;" class="fa fa-check" aria-hidden="true"></i></p>
+
+                <div class="productView-summary">
                         {{summary}}
                     </div>
                 </div>
@@ -286,6 +251,10 @@
 
                     </form>
 
+                    <p>
+                        <span style="text-align:center" id="delivery-date"></span><span style="font-size:11.5px;"> <a href="/shipping-returns/"><em>*exluding samples</em></a></span>
+                    </p>
+
                     {{#if settings.show_wishlist}}
                         <form class="form" method="post" action="{{product.add_to_wishlist_url}}" data-wishlist-add>
                             <input type="hidden" name="variation_id" value="">
@@ -313,3 +282,52 @@
     <div class="modal-content"></div>
     <div class="loadingOverlay"></div>
 </div>
+
+<script>
+    if (new Date().getHours() < 13) {
+        var str = 'Order before 1PM today and get it between:<br> <b>#{firstDate}</b> - <b>#{secondDate}</b> with <a style="text-decoration: underline;" href="/shipping-returns/">Expedited Shipping</a>';
+    } else {
+        var str = 'Order today and get it between:<br> <b>#{firstDate}</b> - <b>#{secondDate}</b> with <a style="text-decoration: underline;" href="/shipping-returns/">Expedited Shipping</a>';
+    }
+
+    function turnAroundDate(startDate, daysToAdd) {
+        var endDate = "", count = 0;
+        while (count < daysToAdd){
+            // add a day to endDate until "days added" equals "days to add"
+            endDate = new Date(startDate.setDate(startDate.getDate() + 1));
+            // if endDate is not Sunday or Saturday
+            if (endDate.getDay() != 0 && endDate.getDay() != 6) {
+                // add a day to "days added"
+                count++;
+            }
+        }
+        return endDate;
+    }
+
+    function formatDate(date) {
+        var dayOfWeek = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday','Saturday' ][date.getDay()];
+        var month = [ "January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November","December" ][date.getMonth()];
+
+        return dayOfWeek + ', ' + month + ' ' + date.getDate();
+    }
+
+    function formatString(firstDate, secondDate) {
+        return str.replace('#{firstDate}', formatDate(firstDate))
+                .replace('#{secondDate}', formatDate(secondDate));
+    }
+
+    if (new Date().getDay() != 0 && new Date().getDay() != 6) {
+        var time = new Date().getHours() < 13 ? 0 : 1;
+        var start = 1 + time
+        var end = 2 + time
+    } else {
+        var start = 1
+        var end = 1
+    }
+
+
+    var firstDate = turnAroundDate(new Date(), start);
+    var secondDate = turnAroundDate(new Date(), end);
+
+    document.getElementById('delivery-date').innerHTML = formatString(firstDate, secondDate);
+</script>

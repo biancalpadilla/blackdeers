@@ -55,6 +55,46 @@ product:
                             {{{product.description}}}
                             {{{snippet 'product_description'}}}
 
+                        <dl class="productView-info">
+                            {{#if product.upc}}
+                            <dt class="productView-info-name">{{lang 'products.upc'}}</dt>
+                            <dd class="productView-info-value" data-product-upc>{{product.upc}}</dd>
+                            {{/if}}
+                            {{#each product.custom_fields}}
+                            <dt class="productView-info-name" data-custom-field-name="{{name}}">{{name}}:</dt>
+                            <dd class="productView-info-value" data-custom-field-name="{{name}}">{{{value}}}</dd>
+                            {{/each}}
+                            {{#if product.condition}}
+                            <dt class="productView-info-name">{{lang 'products.condition'}}</dt>
+                            <dd class="productView-info-value">{{product.condition}}</dd>
+                            {{/if}}
+                            {{#if product.brand}}
+                            <dt class="productView-info-name">{{lang 'halothemes.brand'}}</dt>
+                            <dd class="productView-info-value productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}><a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a></dd>
+                            {{/if}}
+                            {{#if product.availability}}
+                            <dt class="productView-info-name">{{lang 'products.availability'}}</dt>
+                            <dd class="productView-info-value">{{product.availability}}</dd>
+                            {{/if}}
+                            {{#if product.weight}}
+                            <dt class="productView-info-name">{{lang 'products.weight'}}</dt>
+                            <dd class="productView-info-value" data-product-weight>{{product.weight}}</dd>
+                            {{/if}}
+                            {{#if product.min_purchase_quantity}}
+                            <dt class="productView-info-name">{{lang 'products.min_purchase_quantity'}}</dt>
+                            <dd class="productView-info-value">{{lang 'products.purchase_units' quantity=product.min_purchase_quantity}}</dd>
+                            {{/if}}
+                            {{#if product.max_purchase_quantity}}
+                            <dt class="productView-info-name">{{lang 'products.max_purchase_quantity'}}</dt>
+                            <dd class="productView-info-value">{{lang 'products.purchase_units' quantity=product.max_purchase_quantity}}</dd>
+                            {{/if}}
+                            {{#if product.gift_wrapping_available}}
+                            <dt class="productView-info-name">{{lang 'products.gift_wrapping'}}</dt>
+                            <dd class="productView-info-value">{{lang 'products.gift_wrapping_available'}}</dd>
+                            {{/if}}
+                            <br/><br/>
+                        </dl>
+
                             {{#if product.tags.length}}
                                 <ul class="product-tags">
                                 {{#each product.tags}}
