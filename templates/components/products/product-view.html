@@ -250,10 +250,7 @@
                         {{/if}}
 
                     </form>
-
-                    <p>
-                        <span style="text-align:center" id="delivery-date"></span><span style="font-size:11.5px;"> <a href="/shipping-returns/"><em>*exluding samples</em></a></span>
-                    </p>
+                    <!--<p><span style="text-align:center" id="delivery-date"></span><span style="font-size:11.5px;"> <a href="/shipping-returns/"><em>(exluding samples)</em></a></span></p>-->
 
                     {{#if settings.show_wishlist}}
                         <form class="form" method="post" action="{{product.add_to_wishlist_url}}" data-wishlist-add>
@@ -285,7 +282,7 @@
 
 <script>
     if (new Date().getHours() < 13) {
-        var str = 'Order before 1PM today and get it between:<br> <b>#{firstDate}</b> - <b>#{secondDate}</b> with <a style="text-decoration: underline;" href="/shipping-returns/">Expedited Shipping</a>';
+        var str = 'Order before 2PM today and get it between:<br> <b>#{firstDate}</b> - <b>#{secondDate}</b> with <a style="text-decoration: underline;" href="/shipping-returns/">Expedited Shipping</a>';
     } else {
         var str = 'Order today and get it between:<br> <b>#{firstDate}</b> - <b>#{secondDate}</b> with <a style="text-decoration: underline;" href="/shipping-returns/">Expedited Shipping</a>';
     }
@@ -321,8 +318,8 @@
         var start = 1 + time
         var end = 2 + time
     } else {
-        var start = 1
-        var end = 1
+        var start = 2
+        var end = 3
     }
 
 

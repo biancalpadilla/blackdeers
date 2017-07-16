@@ -19,11 +19,11 @@
                         </div>
 
                         <div class="previewCartItem-name">
-                            {{#if brand.name}}
+                            {{!-- #if brand.name}}
                             <span class="previewCartItem-brand">
                                 {{brand.name}}
                             </span>
-                            {{/if}}
+                            {{/if --}}
                             <h6><a href="{{url}}" alt="{{name}}" title="{{name}}">{{name}}</a></h6>
                         </div>
 
@@ -52,6 +52,30 @@
             <div class="cart-total-value">
                 <span>{{cart.sub_total.formatted}}</span>
             </div>
+        </div>
+        <div class="preview-cart-total">
+            <div class="cart-total-label">
+                <strong>{{lang 'cart.checkout.shipping'}}:</strong>
+            </div>
+            {{#if cart.shipping_handling.shipping_cost }}
+            <div class="cart-total-value">
+                <div class="subtotal">
+                    <span>{{cart.shipping_handling.shipping_cost.formatted}}</span>
+                </div>
+            </div>
+            {{else}}
+            <div class="cart-total-value">
+                <em>Calculated at checkout</em>
+            </div>
+            {{/if}}
+            {{#each cart.taxes}}
+            <div class="cart-total-label">
+                <strong>{{name}}:</strong>
+            </div>
+            <div class="cart-total-value">
+                <span>{{cost.formatted}}</span>
+            </div>
+            {{/each}}
         </div>
         <div class="preview-cart-grand-total">
              <div class="cart-total-label">

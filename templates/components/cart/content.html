@@ -18,15 +18,14 @@
                     {{/if}}
                 </td>
                 <td class="cart-item-block cart-item-title">
-                    {{#if brand.name}}
+                    {{!-- #if brand.name}}
                         <p class="cart-item-brand">{{brand.name}}</p>
-                    {{/if}}
+                    {{/if --}}
+
                     <h4 class="cart-item-name"><a href="{{url}}">{{name}}</a></h4>
                     {{#if release_date}}
                         <p>({{release_date}})</p>
                     {{/if}}
-
-                    <p>In stock <i style="color:forestgreen;" class="fa fa-check" aria-hidden="true"></i></p>
 
                     {{#if configurable_fields}}
                         <dl class="definitionList">
@@ -42,6 +41,7 @@
                             {{/each}}
                         </dl>
                     {{/if}}
+
 
                     {{#if options}}
                         <dl class="definitionList">
@@ -61,6 +61,8 @@
                     {{#or options configurable_fields}}
                         <a href="#" data-item-edit="{{id}}">{{lang 'cart.checkout.change'}}</a>
                     {{/or}}
+
+                    <p style="padding-top:10px;"><strong>In stock</strong>, ready to ship <i style="color:forestgreen;" class="fa fa-check" aria-hidden="true"></i></p>
 
                     {{#if type '==' 'GiftCertificate'}}
                         <a href="{{edit_url}}">{{lang 'cart.checkout.change'}}</a>
