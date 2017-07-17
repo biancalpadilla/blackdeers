@@ -48,54 +48,39 @@
         "options" :
         [
           {
-            "group" : "Bebas Neue",
-            "label" : "Bebas Neue",
-            "value" : "Bebas Neue"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro",
+            "value" : "Google_Source+Serif+Pro_400"
           },
           {
-            "group" : "Montserrat",
-            "label" : "Montserrat",
-            "value" : "Google_Montserrat_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Semi Bold",
+            "value" : "Google_Source+Serif+Pro_600"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto",
-            "value" : "Google_Roboto_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Bold",
+            "value" : "Google_Source+Serif+Pro_700"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto Bold",
-            "value" : "Google_Roboto_700"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans",
+            "value" : "Google_Noto+Sans_400"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans",
-            "value" : "Google_Open+Sans_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Italic",
+            "value" : "Google_Noto+Sans_400i"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans Bold",
-            "value" : "Google_Open+Sans_700"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold",
+            "value" : "Google_Noto+Sans_700"
           },
           {
-            "group" : "Roboto Condensed",
-            "label" : "Roboto Condensed",
-            "value" : "Google_Roboto+Condensed_400"
-          },
-          {
-            "group" : "Roboto Condensed",
-            "label" : "Roboto Condensed Bold",
-            "value" : "Google_Roboto+Condensed_700"
-          },
-          {
-            "group" : "Source Sans Pro",
-            "label" : "Source Sans Pro",
-            "value" : "Google_Source+Sans+Pro_400"
-          },
-          {
-            "group" : "Oswald",
-            "label" : "Oswald",
-            "value" : "Google_Oswald_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold Italic",
+            "value" : "Google_Noto+Sans_700i"
           }
         ]
       },
@@ -110,44 +95,39 @@
         "options" :
         [
           {
-            "group" : "Roboto",
-            "label" : "Roboto",
-            "value" : "Google_Roboto_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro",
+            "value" : "Google_Source+Serif+Pro_400"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto Bold",
-            "value" : "Google_Roboto_700"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Semi Bold",
+            "value" : "Google_Source+Serif+Pro_600"
           },
           {
-            "group" : "Karla",
-            "label" : "Karla",
-            "value" : "Google_Karla_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Bold",
+            "value" : "Google_Source+Serif+Pro_700"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans",
-            "value" : "Google_Open+Sans_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans",
+            "value" : "Google_Noto+Sans_400"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans Bold",
-            "value" : "Google_Open+Sans_700"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Italic",
+            "value" : "Google_Noto+Sans_400i"
           },
           {
-            "group" : "Roboto Condensed",
-            "label" : "Roboto Condensed",
-            "value" : "Google_Roboto+Condensed_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold",
+            "value" : "Google_Noto+Sans_700"
           },
           {
-            "group" : "Roboto Condensed",
-            "label" : "Roboto Condensed Bold",
-            "value" : "Google_Roboto+Condensed_700"
-          },
-          {
-            "group" : "Source Sans Pro",
-            "label" : "Source Sans Pro",
-            "value" : "Google_Source+Sans+Pro_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold Italic",
+            "value" : "Google_Noto+Sans_700i"
           }
         ]
       },
@@ -190,49 +170,39 @@
         "options" :
         [
           {
-            "group" : "Montserrat",
-            "label" : "Montserrat",
-            "value" : "Google_Montserrat_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro",
+            "value" : "Google_Source+Serif+Pro_400"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto",
-            "value" : "Google_Roboto_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Semi Bold",
+            "value" : "Google_Source+Serif+Pro_600"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto Bold",
-            "value" : "Google_Roboto_700"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Bold",
+            "value" : "Google_Source+Serif+Pro_700"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans",
-            "value" : "Google_Open+Sans_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans",
+            "value" : "Google_Noto+Sans_400"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans Bold",
-            "value" : "Google_Open+Sans_700"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Italic",
+            "value" : "Google_Noto+Sans_400i"
           },
           {
-            "group" : "Roboto Condensed",
-            "label" : "Roboto Condensed",
-            "value" : "Google_Roboto+Condensed_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold",
+            "value" : "Google_Noto+Sans_700"
           },
           {
-            "group" : "Roboto Condensed",
-            "label" : "Roboto Condensed Bold",
-            "value" : "Google_Roboto+Condensed_700"
-          },
-          {
-            "group" : "Source Sans Pro",
-            "label" : "Source Sans Pro",
-            "value" : "Google_Source+Sans+Pro_400"
-          },
-          {
-            "group" : "Oswald",
-            "label" : "Oswald",
-            "value" : "Google_Oswald_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold Italic",
+            "value" : "Google_Noto+Sans_700i"
           }
         ]
       },
@@ -2028,49 +1998,39 @@
         "options" :
         [
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans",
-            "value" : "Google_Open+Sans_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro",
+            "value" : "Google_Source+Serif+Pro_400"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans Bold",
-            "value" : "Google_Open+Sans_700"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Semi Bold",
+            "value" : "Google_Source+Serif+Pro_600"
           },
           {
-            "group" : "Montserrat",
-            "label" : "Montserrat",
-            "value" : "Google_Montserrat_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Bold",
+            "value" : "Google_Source+Serif+Pro_700"
           },
           {
-            "group" : "Montserrat",
-            "label" : "Montserrat Bold",
-            "value" : "Google_Montserrat_700"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans",
+            "value" : "Google_Noto+Sans_400"
           },
           {
-            "group" : "Karla",
-            "label" : "Karla",
-            "value" : "Google_Karla_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Italic",
+            "value" : "Google_Noto+Sans_400i"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto",
-            "value" : "Google_Roboto_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold",
+            "value" : "Google_Noto+Sans_700"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto Bold",
-            "value" : "Google_Roboto_700"
-          },
-          {
-            "group" : "Source Sans Pro",
-            "label" : "Source Sans Pro",
-            "value" : "Google_Source+Sans+Pro_400"
-          },
-          {
-            "group" : "Volkhov",
-            "label" : "Volkhov",
-            "value" : "Google_Volkhov_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold Italic",
+            "value" : "Google_Noto+Sans_700i"
           }
         ]
       },
@@ -2090,49 +2050,39 @@
         "options" :
         [
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans",
-            "value" : "Google_Open+Sans_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro",
+            "value" : "Google_Source+Serif+Pro_400"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans Bold",
-            "value" : "Google_Open+Sans_700"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Semi Bold",
+            "value" : "Google_Source+Serif+Pro_600"
           },
           {
-            "group" : "Montserrat",
-            "label" : "Montserrat",
-            "value" : "Google_Montserrat_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Bold",
+            "value" : "Google_Source+Serif+Pro_700"
           },
           {
-            "group" : "Montserrat",
-            "label" : "Montserrat Bold",
-            "value" : "Google_Montserrat_700"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans",
+            "value" : "Google_Noto+Sans_400"
           },
           {
-            "group" : "Karla",
-            "label" : "Karla",
-            "value" : "Google_Karla_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Italic",
+            "value" : "Google_Noto+Sans_400i"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto",
-            "value" : "Google_Roboto_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold",
+            "value" : "Google_Noto+Sans_700"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto Bold",
-            "value" : "Google_Roboto_700"
-          },
-          {
-            "group" : "Source Sans Pro",
-            "label" : "Source Sans Pro",
-            "value" : "Google_Source+Sans+Pro_400"
-          },
-          {
-            "group" : "Volkhov",
-            "label" : "Volkhov",
-            "value" : "Google_Volkhov_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold Italic",
+            "value" : "Google_Noto+Sans_700i"
           }
         ]
       },
@@ -2152,44 +2102,39 @@
         "options" :
         [
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans",
-            "value" : "Google_Open+Sans_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro",
+            "value" : "Google_Source+Serif+Pro_400"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans Bold",
-            "value" : "Google_Open+Sans_700"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Semi Bold",
+            "value" : "Google_Source+Serif+Pro_600"
           },
           {
-            "group" : "Montserrat",
-            "label" : "Montserrat",
-            "value" : "Google_Montserrat_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Bold",
+            "value" : "Google_Source+Serif+Pro_700"
           },
           {
-            "group" : "Montserrat",
-            "label" : "Montserrat Bold",
-            "value" : "Google_Montserrat_700"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans",
+            "value" : "Google_Noto+Sans_400"
           },
           {
-            "group" : "Karla",
-            "label" : "Karla",
-            "value" : "Google_Karla_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Italic",
+            "value" : "Google_Noto+Sans_400i"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto",
-            "value" : "Google_Roboto_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold",
+            "value" : "Google_Noto+Sans_700"
           },
           {
-            "group" : "Source Sans Pro",
-            "label" : "Source Sans Pro",
-            "value" : "Google_Source+Sans+Pro_400"
-          },
-          {
-            "group" : "Volkhov",
-            "label" : "Volkhov",
-            "value" : "Google_Volkhov_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold Italic",
+            "value" : "Google_Noto+Sans_700i"
           }
         ]
       },
@@ -2218,39 +2163,39 @@
         "options" :
         [
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans",
-            "value" : "Google_Open+Sans_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro",
+            "value" : "Google_Source+Serif+Pro_400"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans Bold",
-            "value" : "Google_Open+Sans_700"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Semi Bold",
+            "value" : "Google_Source+Serif+Pro_600"
           },
           {
-            "group" : "Montserrat",
-            "label" : "Montserrat",
-            "value" : "Google_Montserrat_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Bold",
+            "value" : "Google_Source+Serif+Pro_700"
           },
           {
-            "group" : "Karla",
-            "label" : "Karla",
-            "value" : "Google_Karla_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans",
+            "value" : "Google_Noto+Sans_400"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto",
-            "value" : "Google_Roboto_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Italic",
+            "value" : "Google_Noto+Sans_400i"
           },
           {
-            "group" : "Source Sans Pro",
-            "label" : "Source Sans Pro",
-            "value" : "Google_Source+Sans+Pro_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold",
+            "value" : "Google_Noto+Sans_700"
           },
           {
-            "group" : "Volkhov",
-            "label" : "Volkhov",
-            "value" : "Google_Volkhov_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold Italic",
+            "value" : "Google_Noto+Sans_700i"
           }
         ]
       },
@@ -2270,39 +2215,39 @@
         "options" :
         [
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans",
-            "value" : "Google_Open+Sans_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro",
+            "value" : "Google_Source+Serif+Pro_400"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans Bold",
-            "value" : "Google_Open+Sans_700"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Semi Bold",
+            "value" : "Google_Source+Serif+Pro_600"
           },
           {
-            "group" : "Montserrat",
-            "label" : "Montserrat",
-            "value" : "Google_Montserrat_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Bold",
+            "value" : "Google_Source+Serif+Pro_700"
           },
           {
-            "group" : "Karla",
-            "label" : "Karla",
-            "value" : "Google_Karla_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans",
+            "value" : "Google_Noto+Sans_400"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto",
-            "value" : "Google_Roboto_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Italic",
+            "value" : "Google_Noto+Sans_400i"
           },
           {
-            "group" : "Source Sans Pro",
-            "label" : "Source Sans Pro",
-            "value" : "Google_Source+Sans+Pro_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold",
+            "value" : "Google_Noto+Sans_700"
           },
           {
-            "group" : "Volkhov",
-            "label" : "Volkhov",
-            "value" : "Google_Volkhov_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold Italic",
+            "value" : "Google_Noto+Sans_700i"
           }
         ]
       },
@@ -2322,39 +2267,39 @@
         "options" :
         [
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans",
-            "value" : "Google_Open+Sans_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro",
+            "value" : "Google_Source+Serif+Pro_400"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans Bold",
-            "value" : "Google_Open+Sans_700"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Semi Bold",
+            "value" : "Google_Source+Serif+Pro_600"
           },
           {
-            "group" : "Montserrat",
-            "label" : "Montserrat",
-            "value" : "Google_Montserrat_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Bold",
+            "value" : "Google_Source+Serif+Pro_700"
           },
           {
-            "group" : "Karla",
-            "label" : "Karla",
-            "value" : "Google_Karla_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans",
+            "value" : "Google_Noto+Sans_400"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto",
-            "value" : "Google_Roboto_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Italic",
+            "value" : "Google_Noto+Sans_400i"
           },
           {
-            "group" : "Source Sans Pro",
-            "label" : "Source Sans Pro",
-            "value" : "Google_Source+Sans+Pro_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold",
+            "value" : "Google_Noto+Sans_700"
           },
           {
-            "group" : "Volkhov",
-            "label" : "Volkhov",
-            "value" : "Google_Volkhov_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold Italic",
+            "value" : "Google_Noto+Sans_700i"
           }
         ]
       },
@@ -2414,39 +2359,39 @@
         "options" :
         [
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans",
-            "value" : "Google_Open+Sans_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro",
+            "value" : "Google_Source+Serif+Pro_400"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans Bold",
-            "value" : "Google_Open+Sans_700"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Semi Bold",
+            "value" : "Google_Source+Serif+Pro_600"
           },
           {
-            "group" : "Montserrat",
-            "label" : "Montserrat",
-            "value" : "Google_Montserrat_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Bold",
+            "value" : "Google_Source+Serif+Pro_700"
           },
           {
-            "group" : "Karla",
-            "label" : "Karla",
-            "value" : "Google_Karla_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans",
+            "value" : "Google_Noto+Sans_400"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto",
-            "value" : "Google_Roboto_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Italic",
+            "value" : "Google_Noto+Sans_400i"
           },
           {
-            "group" : "Source Sans Pro",
-            "label" : "Source Sans Pro",
-            "value" : "Google_Source+Sans+Pro_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold",
+            "value" : "Google_Noto+Sans_700"
           },
           {
-            "group" : "Volkhov",
-            "label" : "Volkhov",
-            "value" : "Google_Volkhov_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold Italic",
+            "value" : "Google_Noto+Sans_700i"
           }
         ]
       },
@@ -2476,39 +2421,39 @@
         "options" :
         [
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans",
-            "value" : "Google_Open+Sans_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro",
+            "value" : "Google_Source+Serif+Pro_400"
           },
           {
-            "group" : "Open Sans",
-            "label" : "Open Sans Bold",
-            "value" : "Google_Open+Sans_700"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Semi Bold",
+            "value" : "Google_Source+Serif+Pro_600"
           },
           {
-            "group" : "Montserrat",
-            "label" : "Montserrat",
-            "value" : "Google_Montserrat_400"
+            "group" : "Source Serif Pro",
+            "label" : "Source Serif Pro Bold",
+            "value" : "Google_Source+Serif+Pro_700"
           },
           {
-            "group" : "Karla",
-            "label" : "Karla",
-            "value" : "Google_Karla_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans",
+            "value" : "Google_Noto+Sans_400"
           },
           {
-            "group" : "Roboto",
-            "label" : "Roboto",
-            "value" : "Google_Roboto_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Italic",
+            "value" : "Google_Noto+Sans_400i"
           },
           {
-            "group" : "Source Sans Pro",
-            "label" : "Source Sans Pro",
-            "value" : "Google_Source+Sans+Pro_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold",
+            "value" : "Google_Noto+Sans_700"
           },
           {
-            "group" : "Volkhov",
-            "label" : "Volkhov",
-            "value" : "Google_Volkhov_400"
+            "group" : "Noto Sans",
+            "label" : "Noto Sans Bold Italic",
+            "value" : "Google_Noto+Sans_700i"
           }
         ]
       },

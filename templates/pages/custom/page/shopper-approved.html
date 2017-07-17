@@ -1,5 +1,37 @@
-<p>
-    <script type="text/javascript">// <![CDATA[
-    var sa_review_count = 20; var sa_date_format = 'F j, Y'; function saLoadScript(src) { var js = window.document.createElement("script"); js.src = src; js.type = "text/javascript"; document.getElementsByTagName("head")[0].appendChild(js); } saLoadScript('//www.shopperapproved.com/merchant/25019.js');
-    // ]]></script>
-</p>
+{{#partial "page"}}
+
+
+<div class="container">
+
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+    <main class="page">
+
+        <h1 class="page-heading">{{page.title}}</h1>
+
+        {{#if page.sub_pages}}
+        <nav class="navBar">
+            <ul class="navBar-section">
+                {{#each page.sub_pages}}
+                <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+        {{/if}}
+
+
+        <div class="page-content page-content--centered">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <p>
+                        <script type="text/javascript"> var sa_review_count = 20; var sa_date_format = 'F j, Y'; function saLoadScript(src) { var js = window.document.createElement("script"); js.src = src; js.type = "text/javascript"; document.getElementsByTagName("head")[0].appendChild(js); } saLoadScript('//www.shopperapproved.com/merchant/25019.js'); </script>
+                        <div id="shopper_review_page"><div id="review_header"></div><div id="merchant_page"></div><div id="review_image"><a href="http://www.shopperapproved.com/reviews/care.club/" target="_blank" rel="nofollow"></a></div></div>
+                    </p>
+                </div>
+        </div>
+
+    </main>
+</div>
+{{/partial}}
+
+{{> layout/base}}
