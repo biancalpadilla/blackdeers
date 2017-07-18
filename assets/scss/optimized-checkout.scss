@@ -54,7 +54,7 @@
 }
 
 legend.form-legend.optimizedCheckout-headingSecondary {
-    font-size: 14px;
+    font-size: 17px;
     letter-spacing: 0.02em;
 }
 
@@ -81,7 +81,7 @@ body {
     color: stencilColor("optimizedCheckout-contentPrimary-color");
     font-family: stencilFontFamily("optimizedCheckout-contentPrimary-font"), Arial, Helvetica, sans-serif;
     font-weight: stencilFontWeight("optimizedCheckout-contentPrimary-font");
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .optimizedCheckout-contentSecondary {
@@ -169,7 +169,7 @@ a {
 // -----------------------------------------------------------------------------
 .optimizedCheckout-form-label {
     color: stencilColor("optimizedCheckout-form-textColor");
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
 }
 
@@ -183,7 +183,7 @@ a {
     border-color: stencilColor("optimizedCheckout-formField-borderColor");
     border-radius: 0;
     padding: .5rem 0.75rem 0.5rem;
-    font-size: 12px;
+    font-size: 16px;
     height: 36px;
 }
 
@@ -209,7 +209,7 @@ a {
 
 .form-body {
     & p {
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 
@@ -280,7 +280,7 @@ a {
         border-top-color: #dddddd;
         padding: 27px 30px;
         & .cart-priceItem {
-            font-size: 13px;
+            font-size: 15px;
             margin-bottom: 1rem;
             & .cart-priceItem-value {
                 font-weight: 700;
@@ -299,18 +299,18 @@ a {
 
 .stepHeader-body {
     color: #5a5a5a;
-    font-size: 12px;
+    font-size: 15px;
     order: 3;
     margin-left: 56px;
 }
 
 .checkout-address--static .address-entry {
-    font-size: 12px;
+    font-size: 15px;
     line-height: 20px;
 }
 
 .cart-header-link {
-    font-size: 11px;
+    font-size: 14px;
     color: #000000;
     font-weight: 700;
     line-height: 20px;
@@ -322,7 +322,7 @@ a {
 .product-price--beforeDiscount {
     color: #8c8c8c;
     font-style: italic;
-    font-size: 13px;
+    font-size: 15x;
 }
 
 .product-price.ng-binding.ng-scope {
@@ -389,7 +389,7 @@ a.redeemable-label {
     min-height: 36px;
     border-radius: 0;
     padding: 0.8rem 1rem;
-    font-size: 12px;
+    font-size: 14px;
     font-family: stencilFontFamily('optimizedCheckout-contentSecondary-font');
 }
 
@@ -406,11 +406,11 @@ a#checkout-customer-login:not(:hover) {
 }
 
 .form-inlineMessage {
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .customerView-actions > button {
-    font-size: 11px;
+    font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -425,7 +425,7 @@ a#checkout-customer-login:not(:hover) {
 }
 
 .stepHeader-actions .button {
-    font-size: 11px;
+    font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -436,7 +436,7 @@ a#checkout-customer-login:not(:hover) {
 }
 
 .form-label small {
-    font-size: 12px;
+    font-size: 15px;
     color: #969696;
 }
 
@@ -445,7 +445,7 @@ a#checkout-customer-login:not(:hover) {
 }
 
 .shippingOption {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .form-checklist-checkbox ~ .form-label {
@@ -466,7 +466,7 @@ a#checkout-customer-login:not(:hover) {
     border-color: #e95144;
     height: 52px;
     letter-spacing: 0.1em;
-    font-size: 16px;
+    font-size: 17px;
     &:hover {
         background-color: #000;
         border-color: #000;
@@ -474,7 +474,7 @@ a#checkout-customer-login:not(:hover) {
 }
 
 a[data-test="forgot-password-link"] {
-    font-size: 12px;
+    font-size: 15px;
     display: inline-block;
     margin-top: 15px;
 }
