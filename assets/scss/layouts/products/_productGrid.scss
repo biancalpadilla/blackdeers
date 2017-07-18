@@ -374,7 +374,7 @@
             margin-bottom: 7px;
             font-size: fontSize("base");
             font-family: stencilFontFamily('card-title-font');
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 700;
             line-height: 20px;
             color: stencilColor('card-title-color');
@@ -390,14 +390,14 @@
         & .prod-price {
             color: stencilColor('basic-price-color');
             font-family: stencilFontFamily('card-title-font');
-            font-size: 16px;
+            font-size: 17px;
             line-height: 25px;
             margin-bottom: 5px;
             & .price--rrp {
                 color: stencilColor('retail-price-color');
                 margin-right: 10px;
                 font-style: italic;
-                font-size: 14px;
+                font-size: 15px;
                 & ~ .price--withoutTax {
                     color: stencilColor('sale-price-color');
                     font-weight: 700;

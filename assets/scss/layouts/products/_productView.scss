@@ -567,7 +567,7 @@ ul.product-tags {
    }
    & > h3 {
       font-size: 26px;
-      font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+      font-family: stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
       position: relative;
       margin-top: 0;
       margin-bottom: 0;
@@ -620,7 +620,8 @@ section.toggle {
 section.toggle .toggle-title {
    cursor: pointer;
    font-size: 26px;
-   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+   font-family: stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
+   font-weight: 700;
    position: relative;
    margin-top: 0;
    margin-bottom: 0;

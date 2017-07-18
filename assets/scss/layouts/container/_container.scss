@@ -286,7 +286,7 @@
             width: 100%;
          }
          & h3 {
-            font-family: "Montserrat", Arial, Helvetica, sans-serif;
+            font-family: stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
             font-size: 16px;
             font-weight: 700;
             letter-spacing: 0;
@@ -675,7 +675,7 @@
 }
 
 .newsletter-left h2.newsletter-heading {
-   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+   font-family: stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
    font-size: 32px;
    position: relative;
    margin-top: 0;
@@ -854,7 +854,7 @@ button[data-reveal-id="halo-ask-an-expert-form"] {
    }
    .modal-header {
       h2 {
-         font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+         font-family: stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
          font-size: 32px;
       }
       padding: 0;

@@ -50,7 +50,7 @@
 
 #main-footer h5 {
     font-family: $fontFamily-headings;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     margin: 0;
     margin-bottom: 19px;
@@ -95,7 +95,7 @@
                 color: stencilColor('footer-column-text-color');
                 & a {
                     font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
-                    font-size: 14px;
+                    font-size: 17px;
                     color: stencilColor('footer-column-link-color');
                     &:hover {
                         border-bottom: 1px solid stencilColor('footer-column-link-color-hover');
@@ -129,7 +129,7 @@
             /* NEW, Spec - Opera 12.1, Firefox 20+ */
             flex-wrap: nowrap;
             font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
-            font-size: 14px;
+            font-size: 17px;
             & > i.fa {
                 width: 36px;
                 min-width: 36px;

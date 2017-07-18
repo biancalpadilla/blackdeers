@@ -39,7 +39,7 @@ $cart-item-label-offset: $cart-thumbnail-maxWidth + $cart-item-spacing;
 
 .cart-header-item {
     font-family: $fontFamily-headings;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 700;
     min-height: 41px;
     padding: 10px 20px 9px;
@@ -133,7 +133,7 @@ $cart-item-label-offset: $cart-thumbnail-maxWidth + $cart-item-spacing;
     }
     a[data-item-edit] {
         font-family: stencilFontFamily('card-title-font'), Arial, Helvetica, sans-serif;
-        font-size: 13px;
+        font-size: 15px;
         color: $anchor-font-color-hover;
         &:hover {
             color: $anchor-font-color;
@@ -202,7 +202,7 @@ $cart-item-label-offset: $cart-thumbnail-maxWidth + $cart-item-spacing;
         text-align: right;
         & .cart-item-label {
             font-family: stencilFontFamily('card-title-font'), Arial, Helvetica, sans-serif;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 400;
             float: left;
             width: 33.33%;
@@ -272,7 +272,7 @@ $cart-item-label-offset: $cart-thumbnail-maxWidth + $cart-item-spacing;
 
 .cart-item-name {
     font-family: stencilFontFamily('card-title-font'), Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: stencilFontWeight('card-title-font');
     margin: 0 0 10px;
     letter-spacing: 0;
@@ -402,7 +402,7 @@ $cart-item-label-offset: $cart-thumbnail-maxWidth + $cart-item-spacing;
 .cart-total-label,
 .cart-total-value {
     font-family: stencilFontFamily('card-title-font'), Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 15.5px;
     float: left;
     padding: spacing('base') 0;
     color: #000;
