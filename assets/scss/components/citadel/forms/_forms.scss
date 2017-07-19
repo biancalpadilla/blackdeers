@@ -15,7 +15,7 @@
 .form-label {
     font-weight: 700;
     font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 
@@ -141,7 +141,7 @@
     font-weight: 700;
     margin-bottom: spacing("half");
     color: #000000;
-    font-size: 14px;
+    font-size: 15px;
     font-family: stencilFontFamily('body-secondary-font'), Arial, Helvetica, sans-serif;
 }
 
@@ -158,7 +158,7 @@
 .form-select--date {
     background-position: right;
     background-size: auto;
-    font-size: fontSize("base");
+    font-size: fontSize("base") * 1.1;
     height: $input-small-height;
     line-height: 1rem;
     max-width: 20rem;

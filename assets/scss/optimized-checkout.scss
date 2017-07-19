@@ -65,10 +65,27 @@ legend.form-legend.optimizedCheckout-headingSecondary {
 body {
     background-color: stencilColor("optimizedCheckout-body-backgroundColor");
     font-family: stencilFontFamily("optimizedCheckout-contentPrimary-font"), Arial, Helvetica, sans-serif;
+    font-size: stencilNumber("fontSize-root", "px") * 1;
 }
 
 .optimizedCheckout-overlay {
     background-color: stencilColor("optimizedCheckout-body-backgroundColor");
+}
+
+p {
+    font-family: stencilFontFamily("optimizedCheckout-contentPrimary-font"), Arial, Helvetica, sans-serif;
+    font-size: stencilNumber("fontSize-root", "px") * 1.12;
+}
+
+.socialBadges-header {
+    display: none;
+}
+
+.socialBadges-row {
+    display: none;
+}
+.dynamic-form-field.dynamic-form-field--company {
+    display: none;
 }
 
 //
@@ -169,10 +186,15 @@ a {
 // -----------------------------------------------------------------------------
 .optimizedCheckout-form-label {
     color: stencilColor("optimizedCheckout-form-textColor");
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
 }
 
+.form-label {
+    color: stencilColor("optimizedCheckout-form-textColor");
+    font-size: 16px;
+    font-weight: 400;
+}
 //
 // Form Input
 // Background & Border Color
@@ -187,6 +209,21 @@ a {
     height: 36px;
 }
 
+.form-input {
+    font-size: 16px;
+}
+
+.form-select {
+    font-size: 16px;
+}
+
+.form-input {
+    font-size: 16px;
+}
+
+.form-checkbox+.form-label, .form-radio+.form-label {
+    font-size: 16px;
+}
 //
 // Discount Banners
 // Background & Text & Icon Color
@@ -291,6 +328,10 @@ a {
         font-weight: 700;
         margin-bottom: 15px;
     }
+}
+
+.product-option {
+    font-size: stencilNumber("fontSize-root", "px") * 0.8;
 }
 
 .checkout-form {
@@ -437,7 +478,7 @@ a#checkout-customer-login:not(:hover) {
 
 .form-label small {
     font-size: 15px;
-    color: #969696;
+    color: #5d5d5d;
 }
 
 .form-checklist {

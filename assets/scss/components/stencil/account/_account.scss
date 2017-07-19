@@ -132,7 +132,7 @@
     margin: 0 0 spacing("eighth");
     text-transform: inherit;
     letter-spacing: 0;
-    font-size: 14px;
+    font-size: 20px;
     font-family: 'Roboto';
     font-weight: 700;
     > a {
@@ -211,7 +211,7 @@
 .account-product-detail-heading {
     color: stencilColor("color-textSecondary");
     font-family: fontFamily("sans");
-    font-size: fontSize("tiny");
+    font-size: 13px;
     margin: 0 0 spacing("quarter");
 }
 
@@ -284,7 +284,7 @@
 }
 
 .account-orderTotal-key {
-    color: stencilColor("color-textSecondary");
+    color: black;
     float: left;
     font-weight: fontWeight("normal");
 
@@ -324,7 +324,7 @@
     background-color: stencilColor("label-backgroundColor");
     color: stencilColor("label-color");
     display: inline-block;
-    font-size: fontSize("tiny");
+    font-size: 15px;
     line-height: lineHeight("smallest");
     margin: 0 0 spacing("quarter");
     padding: spacing("eighth") spacing("third");

@@ -24,6 +24,26 @@
 
         <aside class="account-sidebar col-sm-4 col-sm-push-1">
             <section class="account-sidebar-block">
+                <h3 class="account-heading">Re-order</h3>
+                <p>Select the checkbox next to the items you want to reorder.</p>
+                <div class="order-details-info">
+                    <form class="account-reorder-form" action="{{order.reorder_url}}" method="post" data-account-reorder-form>
+                        <input type="hidden" name="orderid" value="{{order.id}}">
+                        {{#each order.items}}
+                        {{#if show_reorder}}
+                        <input type="hidden" name="reorderitem[{{order_product_id}}]">
+                        {{/if}}
+                        {{/each}}
+                        <input type="submit" class="btn btn-primary" value="{{lang 'account.orders.details.reorder'}}">
+                    </form>
+                    {{#if settings.returns_enabled}}
+                    {{#if order.is_complete}}
+                    <a href="{{order.return_url}}" class="btn btn-alt">{{lang 'account.orders.details.return'}}</a>
+                    {{/if}}
+                    {{/if}}
+                </div>
+            </section>
+            <section class="account-sidebar-block">
                 <h3 class="account-heading">{{lang 'account.orders.details.order_details'}}</h3>
                 <dl class="definitionList">
                     <dt class="definitionList-key">{{lang 'account.orders.details.order_status'}}</dt>
@@ -49,6 +69,36 @@
 
                 <button data-print-invoice="{{order.invoice_url}}" class="btn btn-alt">{{lang 'account.orders.details.print_invoice'}}</button>
             </section>
+
+            {{#if shipments}}
+            <section class="account-sidebar-block">
+                <h3 class="account-heading">{{lang 'account.orders.details.shipments.header'}}</h3>
+                {{#each shipments}}
+                <dl class="definitionList">
+                    <dt class="definitionList-key">{{lang 'account.orders.details.shipments.date'}}:</dt>
+                    <dd class="definitionList-value">{{date_shipped}}</dd>
+                    <dt class="definitionList-key">{{lang 'account.orders.details.shipments.method'}}:</dt>
+                    <dd class="definitionList-value">{{shipping_provider}}</dd>
+                    <dt class="definitionList-key">{{lang 'account.orders.details.shipments.link'}}:</dt>
+                    <dd class="definitionList-value">
+                        {{#if shipping_track.url}}
+                        <a href="{{shipping_track.url}}">
+                            {{/if}}
+
+                            {{#if show_shipping_method}}
+                            {{shipping_track.number}} &mdash; {{shipping_method}}
+                            {{else}}
+                            {{shipping_track.number}}
+                            {{/if}}
+
+                            {{#if shipping_track.url}}
+                        </a>
+                        {{/if}}
+                    </dd>
+                </dl>
+                {{/each}}
+            </section>
+            {{/if}}
 
             {{#if order.shipping_address}}
                 <section class="account-sidebar-block">
@@ -85,36 +135,6 @@
                 </ul>
             </section>
 
-            {{#if shipments}}
-                <section class="account-sidebar-block">
-                    <h3 class="account-heading">{{lang 'account.orders.details.shipments.header'}}</h3>
-                    {{#each shipments}}
-                        <dl class="definitionList">
-                            <dt class="definitionList-key">{{lang 'account.orders.details.shipments.date'}}:</dt>
-                            <dd class="definitionList-value">{{date_shipped}}</dd>
-                            <dt class="definitionList-key">{{lang 'account.orders.details.shipments.method'}}:</dt>
-                            <dd class="definitionList-value">{{shipping_provider}}</dd>
-                            <dt class="definitionList-key">{{lang 'account.orders.details.shipments.link'}}:</dt>
-                            <dd class="definitionList-value">
-                                {{#if shipping_track.url}}
-                                    <a href="{{shipping_track.url}}">
-                                {{/if}}
-
-                                {{#if show_shipping_method}}
-                                    {{shipping_track.number}} &mdash; {{shipping_method}}
-                                {{else}}
-                                    {{shipping_track.number}}
-                                {{/if}}
-
-                                {{#if shipping_track.url}}
-                                    </a>
-                                {{/if}}
-                            </dd>
-                        </dl>
-                    {{/each}}
-                </section>
-            {{/if}}
-
             {{#if order.comments}}
                 <section class="account-sidebar-block">
                     <h3 class="account-heading">{{lang 'account.orders.details.comments'}}</h3>
@@ -122,25 +142,6 @@
                 </section>
             {{/if}}
 
-            <section class="account-sidebar-block">
-                <h3 class="account-heading">{{lang 'account.orders.details.actions'}}</h3>
-                <div class="order-details-info">
-                    <form class="account-reorder-form" action="{{order.reorder_url}}" method="post" data-account-reorder-form>
-                        <input type="hidden" name="orderid" value="{{order.id}}">
-                        {{#each order.items}}
-                            {{#if show_reorder}}
-                                <input type="hidden" name="reorderitem[{{order_product_id}}]">
-                            {{/if}}
-                        {{/each}}
-                        <input type="submit" class="btn btn-alt" value="{{lang 'account.orders.details.reorder'}}">
-                    </form>
-                    {{#if settings.returns_enabled}}
-                        {{#if order.is_complete}}
-                            <a href="{{order.return_url}}" class="btn btn-alt">{{lang 'account.orders.details.return'}}</a>
-                        {{/if}}
-                    {{/if}}
-                </div>
-            </section>
         </aside>
 
     </div>
