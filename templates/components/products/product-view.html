@@ -193,7 +193,7 @@
                         {{/if}}
 
                     </dl>
-                <p><span style="text-align:center;font-size: 14.5px;" id="delivery-date"></span><span style="font-size:12.5px;"> <a href="/shipping-returns/"><em>(exluding samples)</em></a></span></p>
+                <p><span style="text-align:center;font-size: 15.5px;" id="delivery-date"></span><span style="font-size:12.5px;"> <a href="/shipping-returns/"><em>(exluding samples)</em></a></span></p>
                 <p><strong>In stock</strong>, ready to ship <i style="color:#00B774;" class="fa fa-check" aria-hidden="true"></i></p>
 
                 <div class="productView-summary">
@@ -286,9 +286,9 @@
 
 <script>
     if (new Date().getHours() < 13) {
-        var str = 'Want it <b>#{firstDate}</b> - <b>#{secondDate}</b>? Choose <strong>Expedited Shipping</strong> at checkout.';
+        var str = 'Want it <b>#{firstDate}</b> - <b>#{secondDate}</b>? <br>Choose <strong>Expedited Shipping</strong> (1-2 day) at checkout.';
     } else {
-        var str = 'Want it <b>#{firstDate}</b> - <b>#{secondDate}</b>? Choose <strong>Expedited Shipping</strong> at checkout.';
+        var str = 'Want it <b>#{firstDate}</b> - <b>#{secondDate}</b>? <br>Choose <strong>Expedited Shipping</strong> (1-2 day) at checkout.';
     }
 
     function turnAroundDate(startDate, daysToAdd) {
