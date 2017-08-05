@@ -325,7 +325,7 @@
     "footer-copyright-link-color": "#dbdbdb",
     "footer-copyright-link-colorHover": "#ffffff",
     "halothemes_sticky_navigation": true,
-    "halothemes_newsletter_popup": true,
+    "halothemes_newsletter_popup": false,
     "halothemes_megamenu": true,
     "halothemes_lazy_loading_effect": true,
     "copyright_alignment": "center",
@@ -342,7 +342,7 @@
     "price_as_low_as": true,
     "restrict_to_login": false,
     "swatch_option_size": "22x22",
-    "show_geotrust_ssl_seal": false,
+    "show_geotrust_ssl_seal": true,
     "geotrust_ssl_seal_size": "M",
     "show_subcategories": false,
     "bigcommerce_banners": true
