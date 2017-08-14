@@ -47,36 +47,3 @@
 
     </div>
 </article>
-
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Article",
-  "url": {{ canonical_url | json }},
-  "mainEntityOfPage": {{ canonical_url | json }},
-  "name": {{ article.title | json }},
-  "author": {{ jsonld_for_seo_object.metafields.jsonld.author | default: article.author | json }},
-  "publisher": {
-    "@type": "Organization",
-    "logo": {
-      "@type": "ImageObject",{% unless shop.metafields.jsonld.logoWidth == blank %}
-      "width": {{ shop.metafields.jsonld.logoWidth | json }},{% endunless %}{% unless shop.metafields.jsonld.logoHeight == blank %}
-      "height": {{ shop.metafields.jsonld.logoHeight | json }},{% endunless %}
-      "url": {{ jsonld_logo | json }}
-    },
-    "name": {{ shop.name | json }}
-  },
-  "headline": {{ article.title | json }},
-  "image": {
-    "@type": "ImageObject",{% assign articleImageWidth = article.metafields.jsonld.imageWidth | default: shop.metafields.jsonld.articleImageWidth | default: 1024 %}
-    "width": {{ articleImageWidth | json }},{% assign articleImageHeight = article.metafields.jsonld.imageHeight | default: shop.metafields.jsonld.articleImageHeight | default: 1024 %}
-    "height": {{ articleImageHeight | json }},{% if article.image %}
-    "url": "https:{{ article | img_url: '1024x1024' }}"{% else %}
-    "url": "https://cdn.shopify.com/s/images/admin/no-image-large.gif"{% endif %}
-  },
-  "datePublished": "{{ article.created_at }}",
-  "dateModified": "{{ article.published_at }}",
-  "description": {{ article.content | strip_html | json }},
-  "articleBody": {{ article.content | strip_html | json }}
-}
-</script>
