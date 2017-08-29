@@ -10,8 +10,15 @@
         {{#if forms.login.success}}
             {{> components/common/alert-success forms.login.success}}
         {{/if}}
+        <div class="alert alert-warning" role="alert">
+            <strong>Are you a current subscriber?</strong>
+            Manage your subscription via our subscription portal: <a class="alert-link" href="https://careclub.myshopify.com/account/login">Login Here</a>
+        </div>
         <div class="login-row row">
             <form class="login-form form col-sm-6" action="{{urls.auth.check_login}}" method="post">
+                <div class="alert alert-info" role="alert">
+                    <b>As of July 31st, 2017, we moved to a new website platform.</b> Please <a class="alert-link" href="{{urls.auth.create_account}}">Create A New Account</a>. Thank you.
+                </div>
                 <div class="form-field">
                     <label class="form-label" for="login_email">{{lang 'login.field_email'}}</label>
                     <input class="form-input" name="login_email" id="login_email" type="email">
@@ -24,13 +31,8 @@
                     <input type="submit" class="btn btn-primary" value="{{lang 'login.submit_value' }}">
                     <a class="forgot-password" href="{{urls.auth.forgot_password}}">{{lang 'login.forgot_password' }}</a>
                 </div>
-                <br>
-                <div style="padding: 15px;background:rgba(211, 211, 211, 0.42);border-radius: 3px;">
-                    <h2 class="panel-title">Current Subscriber?</h2>
-                    <div>Manage your <strong>subscription</strong> through our subscription portal.</div>
-                    <div>Login<a href="https://careclub.myshopify.com/account/login" style="font-weight: 600;text-decoration: underline;"> here</a></div>
-                </div>
             </form>
+            <br>
             <div class="new-customer col-sm-6">
                 <div class="panel">
                     <div class="panel-header">
