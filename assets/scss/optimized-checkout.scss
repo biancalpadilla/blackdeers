@@ -491,13 +491,12 @@ a#checkout-customer-login:not(:hover) {
 
 .form-checklist-checkbox ~ .form-label {
     min-height: 50px;
-    padding: 0.6rem 2.25rem 0.5rem 3rem;
+    padding: 0.6rem 2.25rem 0.5rem 4rem;
 }
 
 .form-checklist-checkbox ~ .form-label::after {
-    margin: 1rem;
+    //margin: 1rem;
 }
-
 .optimizedCheckout-form-input#order-comments {
     height: 80px;
 }
