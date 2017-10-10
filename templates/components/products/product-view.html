@@ -285,19 +285,16 @@
 </div>
 
 <script>
-    if (new Date().getHours() < 13) {
-        var str = 'Want it <b>#{firstDate}</b> - <b>#{secondDate}</b>? <br>Choose <strong>Expedited Shipping</strong> (1-2 day) at checkout.';
-    } else {
-        var str = 'Want it <b>#{firstDate}</b> - <b>#{secondDate}</b>? <br>Choose <strong>Expedited Shipping</strong> (1-2 day) at checkout.';
-    }
+
+    var str = 'Want it <b>#{firstDate}</b> - <b>#{secondDate}</b>? <br>Choose <strong>Expedited Shipping</strong> (1-2 day) at checkout.';
 
     function turnAroundDate(startDate, daysToAdd) {
         var endDate = "", count = 0;
         while (count < daysToAdd){
             // add a day to endDate until "days added" equals "days to add"
             endDate = new Date(startDate.setDate(startDate.getDate() + 1));
-            // if endDate is not Sunday or Saturday
-            if (endDate.getDay() != 0 && endDate.getDay() != 6) {
+            // if endDate is not Sunday
+            if (endDate.getDay() != 0) {
                 // add a day to "days added"
                 count++;
             }
@@ -317,14 +314,17 @@
                 .replace('#{secondDate}', formatDate(secondDate));
     }
 
-    if (new Date().getDay() != 0 && new Date().getDay() != 6) {
-        var time = new Date().getHours() < 13 ? 0 : 1;
-        var start = 1 + time
-        var end = 2 + time
-    } else {
-        var start = 2
-        var end = 3
-    }
+    // if Today's date is Monday - Saturday, check time to see if we can ship today, otherwise add a day
+    //
+    if (new Date().getHours() <= 13 && new Date().getMinutes() <= 30) {
+       if (new Date().getDay() != 0 || new Date().getDay() != 6) {
+         var start = 1
+         var end = 2
+        }
+      } else {
+         var start = 2
+         var end = 3
+     }
 
 
     var firstDate = turnAroundDate(new Date(), start);
