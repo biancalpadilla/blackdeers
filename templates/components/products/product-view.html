@@ -135,12 +135,13 @@
                         </div>
                     {{/if}}
 
-                {{product.detail_messages}}
+                    <div>
+                        <span><strong>{{lang 'products.sku'}}</strong></span>
+                        <span data-product-sku>{{product.sku}}</span>
+                    </div>
+
+                    {{product.detail_messages}}
                     <dl class="productView-info">
-                        {{#if product.sku}}
-                            <dt class="productView-info-name">{{lang 'products.sku'}}</dt>
-                            <dd class="productView-info-value" data-product-sku>{{product.sku}}</dd>
-                        {{/if}}
                         <br/>
                         {{#if product.shipping}}
                             {{#if product.shipping.calculated}}
@@ -190,11 +191,11 @@
                                     </ul>
                                 </div>
                             </div>
-                        {{/if}}
-
                     </dl>
-                <p><span style="text-align:center;font-size: 15.5px;" id="delivery-date"></span><span style="font-size:12.5px;"> <a href="/shipping-returns/"><em>(exluding samples)</em></a></span></p>
+                    {{/if}}
+
                 <p><strong>In stock</strong>, ready to ship <i style="color:#00B774;" class="fa fa-check" aria-hidden="true"></i></p>
+                <p><span style="text-align:center;font-size: 15.5px;" id="delivery-date"></span><span style="font-size:12.5px;"> <a href="/shipping-returns/"><em>(exluding samples)</em></a></span></p>
 
                 <div class="productView-summary">
                         {{summary}}

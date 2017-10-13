@@ -78,7 +78,7 @@ export default class Product {
                 $container: $('.form-field--stock', $scope),
                 $input: $('[data-product-stock]', $scope),
             },
-            $sku: $('[data-product-sku]'),
+            $sku: $('[data-product-sku]', $scope),
             quantity: {
                 $text: $('.incrementTotal', $scope),
                 $input: $('[name=qty\\[\\]]', $scope),

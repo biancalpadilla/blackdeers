@@ -44955,7 +44955,7 @@
 	                $container: (0, _jquery2.default)('.form-field--stock', $scope),
 	                $input: (0, _jquery2.default)('[data-product-stock]', $scope)
 	            },
-	            $sku: (0, _jquery2.default)('[data-product-sku]'),
+	            $sku: (0, _jquery2.default)('[data-product-sku]', $scope),
 	            quantity: {
 	                $text: (0, _jquery2.default)('.incrementTotal', $scope),
 	                $input: (0, _jquery2.default)('[name=qty\\[\\]]', $scope)

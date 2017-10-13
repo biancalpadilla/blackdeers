@@ -13,6 +13,15 @@
             {{#if price.without_tax}}
                 {{lang 'products.price_with_tax' tax_label=price.tax_label}}
             {{/if}}
+            {{#if page_type '===' 'product'}}
+                {{#if price.saved}}
+                    <div class="price-section price-section--saving">
+                        <span class="price">
+                            {{lang 'products.you_save' amount=price.saved.formatted}}
+                        </span>
+                    </div>
+                {{/if}}
+            {{/if}}
         </div>
     {{/if}}
     {{#if price.without_tax}}
@@ -35,16 +44,16 @@
             {{#if price.with_tax}}
                 <abbr title="{{lang 'products.excluding_tax'}}">{{lang 'products.price_without_tax' tax_label=price.tax_label}}</abbr>
             {{/if}}
+            {{#if page_type '===' 'product'}}
+                {{#if price.saved}}
+                    <div class="price-section price-section--saving">
+                        <span class="price">
+                            {{lang 'products.you_save' amount=price.saved.formatted}}
+                        </span>
+                    </div>
+                {{/if}}
+            {{/if}}
         </div>
-    {{/if}}
-    {{#if page_type '===' 'product'}}
-        {{#if price.saved}}
-            <div class="price-section price-section--saving">
-                <span class="price">
-                    {{lang 'products.you_save' amount=price.saved.formatted}}
-                </span>
-            </div>
-        {{/if}}
     {{/if}}
 {{else}}
     {{#if price.with_tax}}
