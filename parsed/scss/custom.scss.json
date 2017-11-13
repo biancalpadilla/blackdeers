@@ -1,1 +1,1 @@
-{"custom.scss":"/* Custom Styles */"}
+{"custom.scss":"/* Custom Styles */\nimg {\n  .card-image {\n    max-height: 99%;\n    max-width: 100%;\n  }\n}\nimg.hover:hover {\n  opacity: .65;\n}\n\n.prod-item {\n  .prod-image {\n    margin-bottom:24px;\n    height:200px;\n  }\n}\nheader.promo-bar {\n  span.signup-bar-text {\n    padding: 0 0;\n    font-size: 14px;\n  }\n}\n"}

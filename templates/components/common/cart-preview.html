@@ -64,10 +64,19 @@
                 </div>
             </div>
             {{else}}
+            {{#if cart.sub_total.value '>' 59}}
+            <div class="cart-total-value">
+                <div class="subtotal">
+                    <span>$0.00</span>
+                </div>
+            </div>
+            {{else}}
             <div class="cart-total-value">
                 <em>Calculated at checkout</em>
             </div>
             {{/if}}
+            {{/if}}
+
             {{#each cart.taxes}}
             <div class="cart-total-label">
                 <strong>{{name}}:</strong>

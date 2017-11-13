@@ -10,7 +10,7 @@ blog:
         limit: {{theme_settings.homepage_blog_posts_count}}
 ---
  {{!-- {{#partial "hero"}}
- {{#if carousel}} 
+ {{#if carousel}}
         {{> components/carousel}}
     {{/if}}
     {{{snippet 'home_content'}}}
@@ -28,6 +28,8 @@ blog:
     {{> components/halothemes/home-top-banners}}
     <!-- END Home Top Banners -->
 
+    {{> components/halothemes/learn-about-incontinence}}
+
     <!-- BEGIN Home Brand Slider -->
     {{> components/halothemes/home-brand-slider}}
     <!-- END Home Brand Slider -->
@@ -41,7 +43,8 @@ blog:
     {{/if}}
 
 
-    {{> components/halothemes/learn-about-incontinence}}
+    {{> components/halothemes/light-moderate-heavy}}
+
     <!-- BEGIN Home Bottom Banners -->
     {{!-- {{> components/halothemes/home-bottom-banners}} --}}
     <!-- END Home Bottom Banners -->

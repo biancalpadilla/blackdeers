@@ -195,7 +195,7 @@
                     {{/if}}
 
                 <p><strong>In stock</strong>, ready to ship <i style="color:#00B774;" class="fa fa-check" aria-hidden="true"></i></p>
-                <p><span style="text-align:center;font-size: 15.5px;" id="delivery-date"></span><span style="font-size:12.5px;"> <a href="/shipping-returns/"><em>(exluding samples)</em></a></span></p>
+                <p><span style="text-align:center;font-size: 15.5px;" id="delivery-date"></span></p>
 
                 <div class="productView-summary">
                         {{summary}}
@@ -254,7 +254,7 @@
                     </form>
 
                     <p style="padding: 15px;background:rgba(211, 211, 211, 0.42); border-radius: 3px;">
-                        <span style="style=line-height: 35px"><strong>Want to Subscribe & Save up to 5%?</strong></span><br/>Call us at <a href="tel:+18558551666">855-855-1666</a> and we'll get you started.<br/><em>No commitments. Cancel anytime.</em><a href="/subscribe-and-save/" title="subscribe to autoship of adult diaper and incontience products"> Learn More</a>
+                        <span style="style=line-height: 35px"><strong>Want to <a href="#" class="subActivator" style="text-decoration:none; cursor:text; color:inherit">Subscribe</a> & Save up to 5%?</strong></span><br/>Call us at <a href="tel:+18558551666">855-855-1666</a> and we'll get you started.<br/><em>No commitments. Cancel anytime.</em><a href="/subscribe-and-save/" title="subscribe to autoship of adult diaper and incontience products"> Learn More</a>
                     </p>
 
                     {{#if settings.show_wishlist}}
@@ -287,6 +287,13 @@
 
 <script>
 
+$(document).ready(function() {
+        $('.form-field label:contains("Subscribe")').parent().css('display','none');
+
+        $(document).on('click', '.subActivator', function() {
+            $('.form-field label:contains("Subscribe")').parent().css('display','block');
+        });
+});
     var str = 'Want it <b>#{firstDate}</b> - <b>#{secondDate}</b>? <br>Choose <strong>Expedited Shipping</strong> (1-2 day) at checkout.';
 
     function turnAroundDate(startDate, daysToAdd) {
@@ -312,18 +319,18 @@
 
     function formatString(firstDate, secondDate) {
         return str.replace('#{firstDate}', formatDate(firstDate))
-                .replace('#{secondDate}', formatDate(secondDate));
+            .replace('#{secondDate}', formatDate(secondDate));
     }
 
     // if Today's date is Monday - Saturday, check time to see if we can ship today, otherwise add a day
     //
     if (new Date().getHours() <= 13 && new Date().getMinutes() <= 30) {
        if (new Date().getDay() != 0 || new Date().getDay() != 6) {
-         var start = 1
+         var start = 1;
          var end = 2
         }
       } else {
-         var start = 2
+         var start = 2;
          var end = 3
      }
 

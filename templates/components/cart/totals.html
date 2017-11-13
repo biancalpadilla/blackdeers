@@ -22,7 +22,15 @@
             <div class="cart-total-label">
                 <strong>{{lang 'cart.checkout.shipping'}}:</strong>
             </div>
+            {{#if cart.sub_total.value '>' 59 }}
+            <div class="cart-total-value">
+                <div class="subtotal">
+                    <div class="shipping-estimate-value">$0.00</div>
+                </div>
+            </div>
+            {{else}}
             {{> components/cart/shipping-estimator cart.shipping_handling}}
+            {{/if}}
         </li>
     {{/if}}
     {{#each cart.taxes}}

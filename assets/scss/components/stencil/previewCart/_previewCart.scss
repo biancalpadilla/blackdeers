@@ -130,10 +130,11 @@
 .previewCartCheckout-subtotal {
    display: block;
    margin-bottom: spacing("single");
-   margin-top: spacing("single");
+   margin-top: spacing("half");
 }
 
 .previewCartCheckout-additionalCheckoutButtons {
+   margin-top: 25px;
    p {
       // scss-lint:disable ImportantRule
       float: none !important; // 1
