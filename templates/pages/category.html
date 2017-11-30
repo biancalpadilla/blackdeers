@@ -40,18 +40,18 @@ category:
                 <div class="category-image"><img src="{{getImage category.image 'zoom_size'}}"></div>
             {{/if}}
 
-            {{#if category.description}}
-                <div class="category-description">
-                    {{{category.description}}}
-                </div>
-            {{/if}}
-
             {{{snippet 'categories'}}}
 
             {{#if category.products}}
                 {{> components/category/product-listing}}
             {{else}}
                 <div class="alert alert-warning text-center"><p>{{lang 'categories.no_products'}}</p></div>
+            {{/if}}
+
+            {{#if category.description}}
+            <div class="category-description">
+                {{{category.description}}}
+            </div>
             {{/if}}
         </main>
     </div>
